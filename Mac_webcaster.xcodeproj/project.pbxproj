@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		848C071E2380391A00BE8FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C071D2380391A00BE8FA5 /* AppDelegate.swift */; };
+		848C07202380391D00BE8FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848C071F2380391D00BE8FA5 /* Assets.xcassets */; };
+		848C07232380391D00BE8FA5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848C07212380391D00BE8FA5 /* MainMenu.xib */; };
+		848C074123803DC200BE8FA5 /* Scopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C072C23803DC200BE8FA5 /* Scopes.swift */; };
+		848C074223803DC200BE8FA5 /* WebSockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C072D23803DC200BE8FA5 /* WebSockets.swift */; };
+		848C074323803DC200BE8FA5 /* HttpServerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C072E23803DC200BE8FA5 /* HttpServerIO.swift */; };
+		848C074423803DC200BE8FA5 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C072F23803DC200BE8FA5 /* Process.swift */; };
+		848C074523803DC200BE8FA5 /* Socket+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073023803DC200BE8FA5 /* Socket+Server.swift */; };
+		848C074623803DC200BE8FA5 /* String+SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073123803DC200BE8FA5 /* String+SHA1.swift */; };
+		848C074723803DC200BE8FA5 /* String+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073223803DC200BE8FA5 /* String+File.swift */; };
+		848C074823803DC200BE8FA5 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073323803DC200BE8FA5 /* Files.swift */; };
+		848C074923803DC200BE8FA5 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073423803DC200BE8FA5 /* HttpRequest.swift */; };
+		848C074A23803DC200BE8FA5 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073523803DC200BE8FA5 /* HttpResponse.swift */; };
+		848C074B23803DC200BE8FA5 /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073623803DC200BE8FA5 /* HttpServer.swift */; };
+		848C074D23803DC200BE8FA5 /* Errno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073823803DC200BE8FA5 /* Errno.swift */; };
+		848C074E23803DC200BE8FA5 /* Socket+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073923803DC200BE8FA5 /* Socket+File.swift */; };
+		848C074F23803DC200BE8FA5 /* String+BASE64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073A23803DC200BE8FA5 /* String+BASE64.swift */; };
+		848C075023803DC200BE8FA5 /* String+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073B23803DC200BE8FA5 /* String+Misc.swift */; };
+		848C075223803DC200BE8FA5 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073D23803DC200BE8FA5 /* HttpRouter.swift */; };
+		848C075323803DC200BE8FA5 /* HttpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073E23803DC200BE8FA5 /* HttpParser.swift */; };
+		848C075423803DC200BE8FA5 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C073F23803DC200BE8FA5 /* MimeTypes.swift */; };
+		848C075523803DC200BE8FA5 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C074023803DC200BE8FA5 /* Socket.swift */; };
+		848C075723803F1500BE8FA5 /* CaptureServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C075623803F1500BE8FA5 /* CaptureServer.swift */; };
+		848C075B2380407E00BE8FA5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 848C07592380407E00BE8FA5 /* index.html */; };
+		848C075C2380407E00BE8FA5 /* 1.htm in Resources */ = {isa = PBXBuildFile; fileRef = 848C075A2380407E00BE8FA5 /* 1.htm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		848C071A2380391A00BE8FA5 /* Mac_webcaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mac_webcaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		848C071D2380391A00BE8FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		848C071F2380391D00BE8FA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		848C07222380391D00BE8FA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		848C07242380391D00BE8FA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848C07252380391D00BE8FA5 /* Mac_webcaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_webcaster.entitlements; sourceTree = "<group>"; };
+		848C072C23803DC200BE8FA5 /* Scopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scopes.swift; sourceTree = "<group>"; };
+		848C072D23803DC200BE8FA5 /* WebSockets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSockets.swift; sourceTree = "<group>"; };
+		848C072E23803DC200BE8FA5 /* HttpServerIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServerIO.swift; sourceTree = "<group>"; };
+		848C072F23803DC200BE8FA5 /* Process.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
+		848C073023803DC200BE8FA5 /* Socket+Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Socket+Server.swift"; sourceTree = "<group>"; };
+		848C073123803DC200BE8FA5 /* String+SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SHA1.swift"; sourceTree = "<group>"; };
+		848C073223803DC200BE8FA5 /* String+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+File.swift"; sourceTree = "<group>"; };
+		848C073323803DC200BE8FA5 /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		848C073423803DC200BE8FA5 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		848C073523803DC200BE8FA5 /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		848C073623803DC200BE8FA5 /* HttpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
+		848C073823803DC200BE8FA5 /* Errno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errno.swift; sourceTree = "<group>"; };
+		848C073923803DC200BE8FA5 /* Socket+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Socket+File.swift"; sourceTree = "<group>"; };
+		848C073A23803DC200BE8FA5 /* String+BASE64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BASE64.swift"; sourceTree = "<group>"; };
+		848C073B23803DC200BE8FA5 /* String+Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Misc.swift"; sourceTree = "<group>"; };
+		848C073D23803DC200BE8FA5 /* HttpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		848C073E23803DC200BE8FA5 /* HttpParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpParser.swift; sourceTree = "<group>"; };
+		848C073F23803DC200BE8FA5 /* MimeTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeTypes.swift; sourceTree = "<group>"; };
+		848C074023803DC200BE8FA5 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		848C075623803F1500BE8FA5 /* CaptureServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureServer.swift; sourceTree = "<group>"; };
+		848C07592380407E00BE8FA5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		848C075A2380407E00BE8FA5 /* 1.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 1.htm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		848C07172380391A00BE8FA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		848C07112380391A00BE8FA5 = {
+			isa = PBXGroup;
+			children = (
+				848C071C2380391A00BE8FA5 /* Mac_webcaster */,
+				848C071B2380391A00BE8FA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		848C071B2380391A00BE8FA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				848C071A2380391A00BE8FA5 /* Mac_webcaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		848C071C2380391A00BE8FA5 /* Mac_webcaster */ = {
+			isa = PBXGroup;
+			children = (
+				848C07582380403D00BE8FA5 /* resource */,
+				848C072B23803DC200BE8FA5 /* library */,
+				848C071D2380391A00BE8FA5 /* AppDelegate.swift */,
+				848C075623803F1500BE8FA5 /* CaptureServer.swift */,
+				848C071F2380391D00BE8FA5 /* Assets.xcassets */,
+				848C07212380391D00BE8FA5 /* MainMenu.xib */,
+				848C07242380391D00BE8FA5 /* Info.plist */,
+				848C07252380391D00BE8FA5 /* Mac_webcaster.entitlements */,
+			);
+			path = Mac_webcaster;
+			sourceTree = "<group>";
+		};
+		848C072B23803DC200BE8FA5 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				848C072C23803DC200BE8FA5 /* Scopes.swift */,
+				848C072D23803DC200BE8FA5 /* WebSockets.swift */,
+				848C072E23803DC200BE8FA5 /* HttpServerIO.swift */,
+				848C072F23803DC200BE8FA5 /* Process.swift */,
+				848C073023803DC200BE8FA5 /* Socket+Server.swift */,
+				848C073123803DC200BE8FA5 /* String+SHA1.swift */,
+				848C073223803DC200BE8FA5 /* String+File.swift */,
+				848C073323803DC200BE8FA5 /* Files.swift */,
+				848C073423803DC200BE8FA5 /* HttpRequest.swift */,
+				848C073523803DC200BE8FA5 /* HttpResponse.swift */,
+				848C073623803DC200BE8FA5 /* HttpServer.swift */,
+				848C073823803DC200BE8FA5 /* Errno.swift */,
+				848C073923803DC200BE8FA5 /* Socket+File.swift */,
+				848C073A23803DC200BE8FA5 /* String+BASE64.swift */,
+				848C073B23803DC200BE8FA5 /* String+Misc.swift */,
+				848C073D23803DC200BE8FA5 /* HttpRouter.swift */,
+				848C073E23803DC200BE8FA5 /* HttpParser.swift */,
+				848C073F23803DC200BE8FA5 /* MimeTypes.swift */,
+				848C074023803DC200BE8FA5 /* Socket.swift */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		848C07582380403D00BE8FA5 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				848C075A2380407E00BE8FA5 /* 1.htm */,
+				848C07592380407E00BE8FA5 /* index.html */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		848C07192380391A00BE8FA5 /* Mac_webcaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848C07282380391D00BE8FA5 /* Build configuration list for PBXNativeTarget "Mac_webcaster" */;
+			buildPhases = (
+				848C07162380391A00BE8FA5 /* Sources */,
+				848C07172380391A00BE8FA5 /* Frameworks */,
+				848C07182380391A00BE8FA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mac_webcaster;
+			productName = Mac_webcaster;
+			productReference = 848C071A2380391A00BE8FA5 /* Mac_webcaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		848C07122380391A00BE8FA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					848C07192380391A00BE8FA5 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 848C07152380391A00BE8FA5 /* Build configuration list for PBXProject "Mac_webcaster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 848C07112380391A00BE8FA5;
+			productRefGroup = 848C071B2380391A00BE8FA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				848C07192380391A00BE8FA5 /* Mac_webcaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		848C07182380391A00BE8FA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848C075B2380407E00BE8FA5 /* index.html in Resources */,
+				848C075C2380407E00BE8FA5 /* 1.htm in Resources */,
+				848C07202380391D00BE8FA5 /* Assets.xcassets in Resources */,
+				848C07232380391D00BE8FA5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		848C07162380391A00BE8FA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848C074323803DC200BE8FA5 /* HttpServerIO.swift in Sources */,
+				848C074E23803DC200BE8FA5 /* Socket+File.swift in Sources */,
+				848C074923803DC200BE8FA5 /* HttpRequest.swift in Sources */,
+				848C074B23803DC200BE8FA5 /* HttpServer.swift in Sources */,
+				848C074423803DC200BE8FA5 /* Process.swift in Sources */,
+				848C074F23803DC200BE8FA5 /* String+BASE64.swift in Sources */,
+				848C075523803DC200BE8FA5 /* Socket.swift in Sources */,
+				848C075223803DC200BE8FA5 /* HttpRouter.swift in Sources */,
+				848C074823803DC200BE8FA5 /* Files.swift in Sources */,
+				848C075723803F1500BE8FA5 /* CaptureServer.swift in Sources */,
+				848C075323803DC200BE8FA5 /* HttpParser.swift in Sources */,
+				848C075023803DC200BE8FA5 /* String+Misc.swift in Sources */,
+				848C074123803DC200BE8FA5 /* Scopes.swift in Sources */,
+				848C074223803DC200BE8FA5 /* WebSockets.swift in Sources */,
+				848C071E2380391A00BE8FA5 /* AppDelegate.swift in Sources */,
+				848C075423803DC200BE8FA5 /* MimeTypes.swift in Sources */,
+				848C074D23803DC200BE8FA5 /* Errno.swift in Sources */,
+				848C074623803DC200BE8FA5 /* String+SHA1.swift in Sources */,
+				848C074A23803DC200BE8FA5 /* HttpResponse.swift in Sources */,
+				848C074723803DC200BE8FA5 /* String+File.swift in Sources */,
+				848C074523803DC200BE8FA5 /* Socket+Server.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		848C07212380391D00BE8FA5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848C07222380391D00BE8FA5 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		848C07262380391D00BE8FA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		848C07272380391D00BE8FA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		848C07292380391D00BE8FA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mac_webcaster/Mac_webcaster.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Mac_webcaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.math.Mac-webcaster";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		848C072A2380391D00BE8FA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mac_webcaster/Mac_webcaster.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Mac_webcaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.math.Mac-webcaster";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		848C07152380391A00BE8FA5 /* Build configuration list for PBXProject "Mac_webcaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848C07262380391D00BE8FA5 /* Debug */,
+				848C07272380391D00BE8FA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848C07282380391D00BE8FA5 /* Build configuration list for PBXNativeTarget "Mac_webcaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848C07292380391D00BE8FA5 /* Debug */,
+				848C072A2380391D00BE8FA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 848C07122380391A00BE8FA5 /* Project object */;
+}
