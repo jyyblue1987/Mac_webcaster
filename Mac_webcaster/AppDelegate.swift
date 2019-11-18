@@ -7,10 +7,11 @@
 //
 
 import Cocoa
+import AVFoundation
 import VideoToolbox
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
@@ -35,6 +36,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private var running:UInt = 0
     
+    private var session:AVCaptureSession?
+    private var input:AVCaptureScreenInput?
+    private var output:AVCaptureVideoDataOutput?
+    
     func launchServer() {
         do {
             let server = CaptureServer()
@@ -49,37 +54,74 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func startTimer()
     {
-        self.running = 1
+        session = AVCaptureSession()
+        input = AVCaptureScreenInput(displayID: kCGNullDirectDisplay)
+        if session!.canAddInput(input!) {
+            session!.addInput(input!)
+        }
         
-        let queue = DispatchQueue(label: "work-queue")
-        queue.async {
-            while(self.running == 1)
-            {
-                self.makeScreenshots()
-            }
+        output = AVCaptureVideoDataOutput()
+        
+        let videoSettings = [
+            AVVideoCodecKey : AVVideoCodecType.jpeg,
+            AVVideoWidthKey : 1920,
+            AVVideoHeightKey : 1080
+            /*AVVideoCompressionPropertiesKey: [
+              AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
+            ]*/
+        ] as [String : Any]
+        
+        output?.videoSettings = videoSettings
+        
+        output!.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer delegate", attributes: []))
+        
+        if session!.canAddOutput(output!) {
+            session!.addOutput(output!)
+        }
+        
+        session?.startRunning()
+        
+//        self.running = 1
+//
+//        let queue = DispatchQueue(label: "work-queue")
+//        queue.async {
+//            while(self.running == 1)
+//            {
+//                self.makeScreenshots()
+//            }
+//        }
+    }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        print("1234")
+       
+        
+        if CMSampleBufferDataIsReady(sampleBuffer) != true {
+            print("sampleBuffer data is not ready")
+            return
+        }
+        
+        // handle frame data
+        guard let dataBuffer = CMSampleBufferGetDataBuffer(sampleBuffer) else {
+            return
+        }
+        
+        var lengthAtOffset: Int = 0
+        var totalLength: Int = 0
+        var dataPointer: UnsafeMutablePointer<Int8>?
+        if CMBlockBufferGetDataPointer(dataBuffer, atOffset: 0, lengthAtOffsetOut: &lengthAtOffset, totalLengthOut: &totalLength, dataPointerOut: &dataPointer) == noErr {
+            var intArray = Array(UnsafeBufferPointer(start: dataPointer, count: totalLength))
+            sendDataToClient(array: intArray)
         }
     }
     
     func stopTimer() {
         self.running = 0
+       
+        session?.stopRunning()
     }
     
     var init_flag = false
-    let session: UnsafeMutablePointer<VTCompressionSession?> = UnsafeMutablePointer<VTCompressionSession?>.allocate(capacity: 1)
-    func initCodec() {
-        if init_flag == true {
-            return
-        }
-    
-        let width = 1920
-        let height = 1080
-     
-        print("Codec Init Start")
-        VTCompressionSessionCreate(allocator: nil, width: Int32(width), height: Int32(height), codecType: kCMVideoCodecType_JPEG, encoderSpecification: nil, imageBufferAttributes: nil, compressedDataAllocator: nil, outputCallback: nil, refcon: nil, compressionSessionOut: session)
-        
-        print("Codec Init End")
-        init_flag = true
-    }
     
     func takeScreenshot(_ displayID:CGDirectDisplayID) -> Data? {
         let st:Double = NSDate().timeIntervalSince1970
@@ -93,49 +135,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let et1:Double = NSDate().timeIntervalSince1970
         print("---- Compress Image -----", et1 - st1, "s")
-        
-//        let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(imageRef. as! CMSampleBuffer)!
-//        let pts = CMTime()
-//
-//        VTCompressionSessionEncodeFrame(session.pointee!, imageBuffer:imageBuffer, presentationTimeStamp: pts,
-//                                                                           duration: CMTime.invalid, frameProperties: nil, infoFlagsOut: nil)
-//            { (status, infoFlags, sampleBuffer) in
-//
-//                guard status == noErr else {
-//                    print("error: \(status)")
-//                    return
-//                }
-//
-//                if infoFlags == .frameDropped {
-//                    print("frame dropped")
-//                    return
-//                }
-//
-//                guard let sampleBuffer = sampleBuffer else {
-//                    print("sampleBuffer is nil")
-//                    return
-//                }
-//
-//                if CMSampleBufferDataIsReady(sampleBuffer) != true {
-//                    print("sampleBuffer data is not ready")
-//                    return
-//                }
-//
-//                // handle frame data
-//                guard let dataBuffer = CMSampleBufferGetDataBuffer(sampleBuffer) else {
-//                    return
-//                }
-//
-//                var lengthAtOffset: Int = 0
-//                var totalLength: Int = 0
-//                var dataPointer: UnsafeMutablePointer<Int8>?
-//                if CMBlockBufferGetDataPointer(dataBuffer, atOffset: 0, lengthAtOffsetOut: &lengthAtOffset, totalLengthOut: &totalLength, dataPointerOut: &dataPointer) == noErr {
-//                    var intArray = Array(UnsafeBufferPointer(start: dataPointer, count: totalLength))
-////                    sendDataToClient(array: intArray)
-//
-//                }
-//            }
-        
+                
         return jpegData
     }
     
@@ -173,7 +173,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             var byteArray = [UInt8](repeating: 0, count: count)
             image?.copyBytes(to: &byteArray, count:count)
             let st:Double = NSDate().timeIntervalSince1970
-            sendDataToClient(array: byteArray)
+//            sendDataToClient(array: byteArray)
             let et:Double = NSDate().timeIntervalSince1970
             print("---- Send Time -----", et - st, "s")
         }

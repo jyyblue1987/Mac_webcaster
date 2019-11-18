@@ -18,7 +18,7 @@ var g_SignCode: String?
 
 let lock = NSLock()
 
-public func sendDataToClient(array: [UInt8]) -> Int {
+public func sendDataToClient(array: [Int8]) -> Int {
     var totalSize:Int = 0
 
     let curTime:Double = NSDate().timeIntervalSince1970
