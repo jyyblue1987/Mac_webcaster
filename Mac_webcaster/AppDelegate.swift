@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+import VideoToolbox
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -64,17 +64,78 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.running = 0
     }
     
+    var init_flag = false
+    let session: UnsafeMutablePointer<VTCompressionSession?> = UnsafeMutablePointer<VTCompressionSession?>.allocate(capacity: 1)
+    func initCodec() {
+        if init_flag == true {
+            return
+        }
+    
+        let width = 1920
+        let height = 1080
+     
+        print("Codec Init Start")
+        VTCompressionSessionCreate(allocator: nil, width: Int32(width), height: Int32(height), codecType: kCMVideoCodecType_JPEG, encoderSpecification: nil, imageBufferAttributes: nil, compressedDataAllocator: nil, outputCallback: nil, refcon: nil, compressionSessionOut: session)
+        
+        print("Codec Init End")
+        init_flag = true
+    }
+    
     func takeScreenshot(_ displayID:CGDirectDisplayID) -> Data? {
         let st:Double = NSDate().timeIntervalSince1970
         guard let imageRef = CGDisplayCreateImage(displayID) else { return nil }
         let et:Double = NSDate().timeIntervalSince1970
-        print("---- Captuer Image -----", et - st, "s")
-        let image = NSImage(cgImage: imageRef, size: NSZeroSize)
-
-        guard let imageData = image.tiffRepresentation else { return nil }
-        let bitmapRep = NSBitmapImageRep(data: imageData)
-        guard let jpegData = bitmapRep?.representation(using:.jpeg, properties: [.compressionFactor : 0.8]) else { return nil }
-
+        print("---- Capture Image -----", et - st, "s")
+            
+        let bitmapRep = NSBitmapImageRep(cgImage: imageRef)
+        let st1:Double = NSDate().timeIntervalSince1970
+        guard let jpegData = bitmapRep.representation(using:.jpeg, properties: [.compressionFactor : 0.8]) else { return nil }
+        
+        let et1:Double = NSDate().timeIntervalSince1970
+        print("---- Compress Image -----", et1 - st1, "s")
+        
+//        let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(imageRef. as! CMSampleBuffer)!
+//        let pts = CMTime()
+//
+//        VTCompressionSessionEncodeFrame(session.pointee!, imageBuffer:imageBuffer, presentationTimeStamp: pts,
+//                                                                           duration: CMTime.invalid, frameProperties: nil, infoFlagsOut: nil)
+//            { (status, infoFlags, sampleBuffer) in
+//
+//                guard status == noErr else {
+//                    print("error: \(status)")
+//                    return
+//                }
+//
+//                if infoFlags == .frameDropped {
+//                    print("frame dropped")
+//                    return
+//                }
+//
+//                guard let sampleBuffer = sampleBuffer else {
+//                    print("sampleBuffer is nil")
+//                    return
+//                }
+//
+//                if CMSampleBufferDataIsReady(sampleBuffer) != true {
+//                    print("sampleBuffer data is not ready")
+//                    return
+//                }
+//
+//                // handle frame data
+//                guard let dataBuffer = CMSampleBufferGetDataBuffer(sampleBuffer) else {
+//                    return
+//                }
+//
+//                var lengthAtOffset: Int = 0
+//                var totalLength: Int = 0
+//                var dataPointer: UnsafeMutablePointer<Int8>?
+//                if CMBlockBufferGetDataPointer(dataBuffer, atOffset: 0, lengthAtOffsetOut: &lengthAtOffset, totalLengthOut: &totalLength, dataPointerOut: &dataPointer) == noErr {
+//                    var intArray = Array(UnsafeBufferPointer(start: dataPointer, count: totalLength))
+////                    sendDataToClient(array: intArray)
+//
+//                }
+//            }
+        
         return jpegData
     }
     
@@ -100,6 +161,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("-- cannot get active display list, error \(status)")
         }
 
+        if displayCount > 1 {
+           displayCount = 1
+        }
+        
         for i in 0..<displayCount {
             let displayID = activeDisplays[Int(i)]
             let image = self.takeScreenshot(displayID)
