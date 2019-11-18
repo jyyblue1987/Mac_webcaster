@@ -11,6 +11,8 @@ import AVFoundation
 
 class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     @IBOutlet weak var host_url: NSTextField!
+    @IBOutlet weak var broadcast_status: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,9 +69,11 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
     func actionCatpure() {
         if session!.isRunning {
             session?.stopRunning()
+            broadcast_status.stringValue = "Broadcast is stoped."
         }
         else {
             session?.startRunning()
+            broadcast_status.stringValue = "Broadcast is started."
         }
     }
     
