@@ -22,7 +22,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         launchServer()
         initScreenCapture()
         
-        actionCatpure()
+//        actionCatpure()
     }
     
     func getIpAddress() -> String! {
