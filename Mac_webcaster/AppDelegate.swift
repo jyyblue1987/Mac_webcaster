@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSamp
        
 //        self.makeScreenshots()
         self.launchServer()
+        initScreenCapture()
         startTimer()
     }
 
@@ -52,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSamp
         }
     }
     
-    func startTimer()
+    func initScreenCapture()
     {
         session = AVCaptureSession()
         input = AVCaptureScreenInput(displayID: kCGNullDirectDisplay)
@@ -64,8 +65,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSamp
         
         let videoSettings = [
             AVVideoCodecKey : AVVideoCodecType.jpeg,
-            AVVideoWidthKey : 1920,
-            AVVideoHeightKey : 1080
+//            AVVideoWidthKey : 1920,
+//            AVVideoHeightKey : 1080
             /*AVVideoCompressionPropertiesKey: [
               AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
             ]*/
@@ -78,7 +79,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSamp
         if session!.canAddOutput(output!) {
             session!.addOutput(output!)
         }
-        
+    }
+    
+    func startTimer()
+    {
+        if session!.isRunning {
+            return
+        }
         session?.startRunning()
         
 //        self.running = 1
@@ -93,8 +100,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSamp
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        print("1234")
-       
         
         if CMSampleBufferDataIsReady(sampleBuffer) != true {
             print("sampleBuffer data is not ready")
@@ -118,6 +123,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, AVCaptureVideoDataOutputSamp
     func stopTimer() {
         self.running = 0
        
+        if session?.isRunning == false {
+            return
+        }
         session?.stopRunning()
     }
     

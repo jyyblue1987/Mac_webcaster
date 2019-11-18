@@ -152,12 +152,14 @@ public func CaptureServer() -> HttpServer {
 //
     server["/websocket"] = websocket(text: { (session, text) in
 //        session.writeText(text)
+        lock.lock()
         for (index, element) in g_sessionList.enumerated() {
             if element == session {
                 print("Ack = ", index)
                 g_readyList[index] = true
             }
         }
+        lock.unlock()
     }, binary: { (session, binary) in
         session.writeBinary(binary)
     }, pong: { (_, _) in
