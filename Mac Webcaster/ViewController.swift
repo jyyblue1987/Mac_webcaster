@@ -22,7 +22,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         launchServer()
         initScreenCapture()
         
-//        actionCatpure()
+        actionCatpure()
     }
     
     func getIpAddress() -> String! {
@@ -110,10 +110,11 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         let videoSettings = [
             AVVideoCodecKey : AVVideoCodecType.jpeg,
 //            AVVideoWidthKey : 1920,
-//            AVVideoHeightKey : 1080
-            /*AVVideoCompressionPropertiesKey: [
-              AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
-            ]*/
+//            AVVideoHeightKey : 1080,
+//            AVVideoCompressionPropertiesKey: [
+////              AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
+//                AVVideoQualityKey: 0.1
+//            ]
         ] as [String : Any]
         
         output?.videoSettings = videoSettings
