@@ -22,7 +22,8 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         launchServer()
         initScreenCapture()
         
-        actionCatpure()
+//        actionCatpure()
+        broadcast_status.stringValue = "Broadcast is not started."
     }
     
     func getIpAddress() -> String! {
@@ -107,15 +108,31 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         output = AVCaptureVideoDataOutput()
         
-        let videoSettings = [
-            AVVideoCodecKey : AVVideoCodecType.jpeg,
-//            AVVideoWidthKey : 1920,
-//            AVVideoHeightKey : 1080,
-//            AVVideoCompressionPropertiesKey: [
-////              AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
-//                AVVideoQualityKey: 0.1
-//            ]
-        ] as [String : Any]
+        let videoSettings : [String : Any]?
+        
+        if #available(macOS 10.13, *) {
+              // macOS 10.13 or later code path
+            videoSettings = [
+                AVVideoCodecKey : AVVideoCodecType.jpeg,
+            //            AVVideoWidthKey : 1920,
+            //            AVVideoHeightKey : 1080,
+            //            AVVideoCompressionPropertiesKey: [
+            ////              AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
+            //                AVVideoQualityKey: 0.1
+            //            ]
+                    ] as [String : Any]
+        } else {
+              // code for earlier than 10.13
+            videoSettings = [
+                        AVVideoCodecKey : AVVideoCodecJPEG,
+            //            AVVideoWidthKey : 1920,
+            //            AVVideoHeightKey : 1080,
+            //            AVVideoCompressionPropertiesKey: [
+            ////              AVVideoAverageBitRateKey:  NSNumber(value: 5000000)
+            //                AVVideoQualityKey: 0.1
+            //            ]
+                    ] as [String : Any]
+        }
         
         output?.videoSettings = videoSettings
         

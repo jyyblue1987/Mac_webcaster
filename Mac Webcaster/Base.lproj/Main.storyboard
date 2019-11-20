@@ -765,7 +765,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7LX-vZ-vza">
-                                <rect key="frame" x="155" y="194" width="190" height="51"/>
+                                <rect key="frame" x="155" y="195" width="222" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="XIU-Mg-Fiu">
                                     <font key="font" metaFont="system" size="19"/>
