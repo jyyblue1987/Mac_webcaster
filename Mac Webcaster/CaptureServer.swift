@@ -96,7 +96,7 @@ public func CaptureServer() -> HttpServer {
             function WebSocketTest() {
                 if ("WebSocket" in window) {
                     // Let us open a web socket
-                    var ws = new WebSocket("ws://" + host + "/websocket");
+                    var ws = new WebSocket("ws://" + host + ":8080/websocket");
 
                     ws.onopen = function() {
                         console.log("socket is connected")

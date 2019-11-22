@@ -17,13 +17,13 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        host_url.stringValue = "http://" + getIpAddress()
+        host_url.stringValue = "http://" + getIpAddress() + ":8080"
         
         launchServer()
         initScreenCapture()
         
 //        actionCatpure()
-        broadcast_status.stringValue = "Broadcast is not started."
+//        broadcast_status.stringValue = "Broadcast is not started."
     }
     
     func getIpAddress() -> String! {
@@ -89,12 +89,13 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
     func launchServer() {
         do {
             let server = CaptureServer()
-            try server.start(80)
+            try server.start(8080, forceIPv4:true)
             self.server = server
             
             print("Http Server is Started")
         } catch {
             print("Server start error: \(error)")
+            host_url.stringValue = "\(error)"
         }
     }
     
