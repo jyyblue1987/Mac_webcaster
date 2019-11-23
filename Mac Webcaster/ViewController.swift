@@ -21,8 +21,8 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         // set background
 //        container.wantsLayer = true
-        container.layer?.backgroundColor = NSColor.darkGray.cgColor
-        container.layer?.cornerRadius = CGFloat(20)
+//        container.layer?.backgroundColor = NSColor.darkGray.cgColor
+//        container.layer?.cornerRadius = CGFloat(20)
 
         // Do any additional setup after loading the view.
         host_url.stringValue = "http://" + getIpAddress() + ":8080"
@@ -86,7 +86,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     @IBAction func onHideHelp(sender: NSButton) {
-        self.dismiss(sheetViewController)
+//        self.dismiss(sheetViewController)
     }
     
     func actionCatpure() {

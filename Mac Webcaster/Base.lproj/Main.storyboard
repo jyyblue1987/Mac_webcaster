@@ -713,9 +713,6 @@
                             <containerView appearanceType="darkAqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-7c-x6a">
                                 <rect key="frame" x="94" y="159" width="313" height="331"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <connections>
-                                    <segue destination="6Au-VJ-RKn" kind="embed" id="ydW-UZ-mql"/>
-                                </connections>
                             </containerView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r9-1I-Ikm">
                                 <rect key="frame" x="155" y="361" width="208" height="44"/>
@@ -820,7 +817,6 @@
                     <connections>
                         <outlet property="broadcast_status" destination="7LX-vZ-vza" id="qoI-aI-dz5"/>
                         <outlet property="btnShare" destination="WMQ-JW-2fc" id="tqx-tb-fAO"/>
-                        <outlet property="container" destination="l3f-7c-x6a" id="sBj-b0-HS8"/>
                         <outlet property="host_url" destination="0hZ-IL-2Fw" id="YgR-Mh-hLH"/>
                     </connections>
                 </viewController>
@@ -847,6 +843,72 @@
                                     <action selector="dismissController:" target="6Au-VJ-RKn" id="coi-HN-MD8"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJT-6X-yYu">
+                                <rect key="frame" x="123" y="392" width="204" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="center" title="Help" id="GkI-jg-Yba">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtq-U7-iQO">
+                                <rect key="frame" x="18" y="374" width="200" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="left" title="What is Reddit?" id="QzW-lB-chc">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DM2-BK-QVS">
+                                <rect key="frame" x="18" y="281" width="424" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="left" allowsEditingTextAttributes="YES" id="02h-VR-Jyj">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <string key="title">Reddit is an American social news aggregation, web content rating, and discussion website. Registered members submit content to the site such as links, text posts, and images, which are then voted up or down by other members.</string>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAY-md-cuL">
+                                <rect key="frame" x="18" y="263" width="196" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="left" title="What is Reddit?" id="rzk-BS-aWz">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snb-O9-u8r">
+                                <rect key="frame" x="18" y="170" width="420" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="left" allowsEditingTextAttributes="YES" id="HAr-Qb-B09">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <string key="title">Reddit is an American social news aggregation, web content rating, and discussion website. Registered members submit content to the site such as links, text posts, and images, which are then voted up or down by other members.</string>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uA-mP-OaE">
+                                <rect key="frame" x="18" y="148" width="196" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="left" title="What is Reddit?" id="JNd-SA-Llc">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8kX-LT-swk">
+                                <rect key="frame" x="18" y="55" width="420" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="left" allowsEditingTextAttributes="YES" id="Exk-fM-2Ci">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <string key="title">Reddit is an American social news aggregation, web content rating, and discussion website. Registered members submit content to the site such as links, text posts, and images, which are then voted up or down by other members.</string>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                 </viewController>
