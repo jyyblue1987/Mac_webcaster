@@ -785,8 +785,8 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMQ-JW-2fc">
-                                <rect key="frame" x="360" y="112" width="37" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="370" y="472" width="37" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSInfo" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="b7w-WI-ifP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
