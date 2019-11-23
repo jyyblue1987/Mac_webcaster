@@ -831,15 +831,28 @@
         <!--View Controller-->
         <scene sceneID="pwW-hb-hHg">
             <objects>
-                <viewController id="6Au-VJ-RKn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SheetViewController" id="6Au-VJ-RKn" sceneMemberID="viewController">
                     <view key="view" id="Aa6-yC-YQN">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="456"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1Q-5i-NoT">
+                                <rect key="frame" x="337" y="13" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hGi-f6-Aro">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="6Au-VJ-RKn" id="coi-HN-MD8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="O1B-1B-SA7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="771"/>
+            <point key="canvasLocation" x="605" y="849"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hhm-WE-IMt">

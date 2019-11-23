@@ -76,8 +76,18 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         sharingServicePicker.show(relativeTo: btnShare.bounds, of: btnShare, preferredEdge: NSRectEdge.maxX)
     }
     
+    lazy var sheetViewController: NSViewController = {
+        return self.storyboard!.instantiateController(withIdentifier: "SheetViewController")
+        as! NSViewController
+    }()
+    
     @IBAction func onShowHelp(sender: NSButton) {
-   }
+        self.presentAsSheet(sheetViewController)
+    }
+    
+    @IBAction func onHideHelp(sender: NSButton) {
+        self.dismiss(sheetViewController)
+    }
     
     func actionCatpure() {
         if session!.isRunning {
