@@ -711,7 +711,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView appearanceType="darkAqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-7c-x6a">
-                                <rect key="frame" x="94" y="101" width="313" height="411"/>
+                                <rect key="frame" x="94" y="159" width="313" height="331"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <connections>
                                     <segue destination="6Au-VJ-RKn" kind="embed" id="ydW-UZ-mql"/>
@@ -736,7 +736,7 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-Jf-m50">
-                                <rect key="frame" x="182" y="36" width="38" height="35"/>
+                                <rect key="frame" x="182" y="113" width="38" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="circular" image="circle" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0zu-bz-k5a">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -747,7 +747,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-uI-Wgh">
-                                <rect key="frame" x="353" y="124" width="38" height="35"/>
+                                <rect key="frame" x="365" y="202" width="38" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="circular" image="question" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="MuC-bh-39q">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -787,7 +787,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMQ-JW-2fc">
-                                <rect key="frame" x="295" y="34" width="45" height="40"/>
+                                <rect key="frame" x="295" y="111" width="45" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="circular" image="share" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="b7w-WI-ifP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -804,6 +804,15 @@
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znc-g6-u3u">
+                                <rect key="frame" x="145" y="498" width="208" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" alignment="center" title="Mirrowing" id="jfl-2Y-XaF">
+                                    <font key="font" metaFont="system" size="29"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
@@ -831,6 +840,19 @@
                 <customObject id="O1B-1B-SA7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605" y="771"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hhm-WE-IMt">
+            <objects>
+                <viewController id="ZCk-4f-akW" sceneMemberID="viewController">
+                    <view key="view" id="M5a-Pn-xJP">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="0v4-zB-9QF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="1287"/>
         </scene>
     </scenes>
     <resources>
