@@ -56,12 +56,6 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
         return address as? String ?? ""
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
     
     @IBAction func onStartStop(sender: NSButton) {
         actionCatpure()
