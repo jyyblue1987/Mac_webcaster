@@ -799,6 +799,7 @@
                     </view>
                     <connections>
                         <outlet property="broadcast_status" destination="7LX-vZ-vza" id="qoI-aI-dz5"/>
+                        <outlet property="btnShare" destination="WMQ-JW-2fc" id="tqx-tb-fAO"/>
                         <outlet property="host_url" destination="0hZ-IL-2Fw" id="YgR-Mh-hLH"/>
                     </connections>
                 </viewController>

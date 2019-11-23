@@ -9,9 +9,11 @@
 import Cocoa
 import AVFoundation
 
+
 class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     @IBOutlet weak var host_url: NSTextField!
     @IBOutlet weak var broadcast_status: NSTextField!
+    @IBOutlet weak var btnShare: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +66,10 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBAction func onShowHelp(sender: NSButton) {
 //        actionCatpure()
         print("On Help Clicked")
+        
+        let arrData : [String] = [host_url.stringValue]
+        let sharingServicePicker = NSSharingServicePicker (items: arrData )
+        sharingServicePicker.show(relativeTo: btnShare.bounds, of: btnShare, preferredEdge: NSRectEdge.maxX)
     }
     
     func actionCatpure() {
