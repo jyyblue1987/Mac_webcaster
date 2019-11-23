@@ -20,14 +20,14 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidLoad()
         
         // set background
-        container.wantsLayer = true
-        container.layer?.backgroundColor = NSColor.gray.cgColor
-        container.layer?.borderColor = NSColor.darkGray.cgColor
+//        container.wantsLayer = true
+        container.layer?.backgroundColor = NSColor.darkGray.cgColor
         container.layer?.cornerRadius = CGFloat(20)
 
         // Do any additional setup after loading the view.
         host_url.stringValue = "http://" + getIpAddress() + ":8080"
-        
+        host_url.textColor = NSColor.black
+               
         launchServer()
         initScreenCapture()
         
