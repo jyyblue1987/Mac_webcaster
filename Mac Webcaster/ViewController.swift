@@ -11,12 +11,16 @@ import AVFoundation
 
 
 class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    @IBOutlet weak var container: NSView!
     @IBOutlet weak var host_url: NSTextField!
     @IBOutlet weak var broadcast_status: NSTextField!
     @IBOutlet weak var btnShare: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set background
+        container.layer?.backgroundColor = NSColor.gray.cgColor
 
         // Do any additional setup after loading the view.
         host_url.stringValue = "http://" + getIpAddress() + ":8080"
@@ -63,14 +67,14 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         actionCatpure()
     }
     
-    @IBAction func onShowHelp(sender: NSButton) {
-//        actionCatpure()
-        print("On Help Clicked")
-        
+    @IBAction func onBtnShare(sender: NSButton) {
         let arrData : [String] = [host_url.stringValue]
         let sharingServicePicker = NSSharingServicePicker (items: arrData )
         sharingServicePicker.show(relativeTo: btnShare.bounds, of: btnShare, preferredEdge: NSRectEdge.maxX)
     }
+    
+    @IBAction func onShowHelp(sender: NSButton) {
+   }
     
     func actionCatpure() {
         if session!.isRunning {

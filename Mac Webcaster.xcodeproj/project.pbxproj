@@ -31,6 +31,9 @@
 		848C35E22382B1E8005462D4 /* HttpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C35CE2382B1E8005462D4 /* HttpParser.swift */; };
 		848C35E32382B1E8005462D4 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C35CF2382B1E8005462D4 /* MimeTypes.swift */; };
 		848C35E42382B1E8005462D4 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C35D02382B1E8005462D4 /* Socket.swift */; };
+		84E0B81923896103008EC228 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0B81623896103008EC228 /* question.png */; };
+		84E0B81A23896103008EC228 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0B81723896103008EC228 /* circle.png */; };
+		84E0B81B23896103008EC228 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0B81823896103008EC228 /* share.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		848C35CE2382B1E8005462D4 /* HttpParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpParser.swift; sourceTree = "<group>"; };
 		848C35CF2382B1E8005462D4 /* MimeTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeTypes.swift; sourceTree = "<group>"; };
 		848C35D02382B1E8005462D4 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		84E0B81623896103008EC228 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		84E0B81723896103008EC228 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		84E0B81823896103008EC228 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +99,10 @@
 		848C35AB2382AB8C005462D4 /* Mac Webcaster */ = {
 			isa = PBXGroup;
 			children = (
-				848C35BC2382B1E8005462D4 /* CaptureServer.swift */,
 				848C35BD2382B1E8005462D4 /* library */,
+				84E0B81523896103008EC228 /* resource */,
 				848C35AC2382AB8C005462D4 /* AppDelegate.swift */,
+				848C35BC2382B1E8005462D4 /* CaptureServer.swift */,
 				848C35AE2382AB8C005462D4 /* ViewController.swift */,
 				848C35B02382AB8E005462D4 /* Assets.xcassets */,
 				848C35B22382AB8E005462D4 /* Main.storyboard */,
@@ -130,6 +137,17 @@
 			);
 			path = library;
 			sourceTree = "<group>";
+		};
+		84E0B81523896103008EC228 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				84E0B81623896103008EC228 /* question.png */,
+				84E0B81723896103008EC228 /* circle.png */,
+				84E0B81823896103008EC228 /* share.png */,
+			);
+			name = resource;
+			path = "Mac Webcaster/resource";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -190,7 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				848C35B12382AB8E005462D4 /* Assets.xcassets in Resources */,
+				84E0B81923896103008EC228 /* question.png in Resources */,
+				84E0B81B23896103008EC228 /* share.png in Resources */,
 				848C35B42382AB8E005462D4 /* Main.storyboard in Resources */,
+				84E0B81A23896103008EC228 /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

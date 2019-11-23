@@ -745,9 +745,9 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-Jf-m50">
-                                <rect key="frame" x="226" y="20" width="49" height="49"/>
+                                <rect key="frame" x="169" y="36" width="38" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSShareTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0zu-bz-k5a">
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="circle" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0zu-bz-k5a">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -785,14 +785,25 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMQ-JW-2fc">
-                                <rect key="frame" x="370" y="472" width="37" height="40"/>
+                                <rect key="frame" x="282" y="34" width="45" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSInfo" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="b7w-WI-ifP">
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="share" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="b7w-WI-ifP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="onShowHelpWithSender:" target="rPt-NT-nkU" id="Guk-je-RYF"/>
+                                    <action selector="onBtnShareWithSender:" target="rPt-NT-nkU" id="yJc-ML-0e6"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-uI-Wgh">
+                                <rect key="frame" x="353" y="124" width="38" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="question" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="MuC-bh-39q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onShowHelpWithSender:" target="rPt-NT-nkU" id="cn3-6n-2IF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -800,6 +811,7 @@
                     <connections>
                         <outlet property="broadcast_status" destination="7LX-vZ-vza" id="qoI-aI-dz5"/>
                         <outlet property="btnShare" destination="WMQ-JW-2fc" id="tqx-tb-fAO"/>
+                        <outlet property="container" destination="l3f-7c-x6a" id="sBj-b0-HS8"/>
                         <outlet property="host_url" destination="0hZ-IL-2Fw" id="YgR-Mh-hLH"/>
                     </connections>
                 </viewController>
@@ -822,7 +834,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSInfo" width="32" height="32"/>
-        <image name="NSShareTemplate" width="11" height="16"/>
+        <image name="circle" width="900" height="895"/>
+        <image name="question" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="share" width="512" height="512"/>
     </resources>
 </document>
