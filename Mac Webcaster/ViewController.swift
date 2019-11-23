@@ -61,6 +61,11 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         actionCatpure()
     }
     
+    @IBAction func onShowHelp(sender: NSButton) {
+//        actionCatpure()
+        print("On Help Clicked")
+    }
+    
     func actionCatpure() {
         if session!.isRunning {
             session?.stopRunning()

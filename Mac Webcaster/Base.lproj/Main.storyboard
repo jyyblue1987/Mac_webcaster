@@ -784,6 +784,17 @@
                                     <action selector="terminate:" target="rPt-NT-nkU" id="7P7-Mk-UOS"/>
                                 </connections>
                             </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMQ-JW-2fc">
+                                <rect key="frame" x="360" y="112" width="37" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSInfo" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="b7w-WI-ifP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onShowHelpWithSender:" target="rPt-NT-nkU" id="Guk-je-RYF"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -810,6 +821,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSInfo" width="32" height="32"/>
         <image name="NSShareTemplate" width="11" height="16"/>
     </resources>
 </document>
