@@ -726,15 +726,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI7-mc-82z">
-                                <rect key="frame" x="155" y="293" width="204" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" title="・Enter this url in your browser." id="tSk-fV-zH6">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y26-eQ-lbX">
                                 <rect key="frame" x="155" y="419" width="212" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -745,7 +736,7 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-Jf-m50">
-                                <rect key="frame" x="169" y="36" width="38" height="35"/>
+                                <rect key="frame" x="182" y="36" width="38" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="circular" image="circle" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0zu-bz-k5a">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -755,11 +746,22 @@
                                     <action selector="onStartStopWithSender:" target="rPt-NT-nkU" id="KDQ-Ds-YaH"/>
                                 </connections>
                             </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-uI-Wgh">
+                                <rect key="frame" x="353" y="124" width="38" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="question" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="MuC-bh-39q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onShowHelpWithSender:" target="rPt-NT-nkU" id="cn3-6n-2IF"/>
+                                </connections>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hZ-IL-2Fw">
-                                <rect key="frame" x="167" y="268" width="194" height="51"/>
+                                <rect key="frame" x="154" y="253" width="214" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="fK9-5z-m6e">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -785,7 +787,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMQ-JW-2fc">
-                                <rect key="frame" x="282" y="34" width="45" height="40"/>
+                                <rect key="frame" x="295" y="34" width="45" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="circular" image="share" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="b7w-WI-ifP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -795,17 +797,15 @@
                                     <action selector="onBtnShareWithSender:" target="rPt-NT-nkU" id="yJc-ML-0e6"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-uI-Wgh">
-                                <rect key="frame" x="353" y="124" width="38" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="question" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="MuC-bh-39q">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI7-mc-82z">
+                                <rect key="frame" x="155" y="298" width="204" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" title="・Enter this url in your browser." id="tSk-fV-zH6">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="onShowHelpWithSender:" target="rPt-NT-nkU" id="cn3-6n-2IF"/>
-                                </connections>
-                            </button>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
