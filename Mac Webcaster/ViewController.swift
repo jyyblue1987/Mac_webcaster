@@ -129,7 +129,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
             session!.addInput(input!)
         }
         
-        input?.minFrameDuration = CMTimeMake(value: 1, timescale: 20)
+        input?.minFrameDuration = CMTimeMake(value: 1, timescale: 15)
         
         output = AVCaptureVideoDataOutput()
         
