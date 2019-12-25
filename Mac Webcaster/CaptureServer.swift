@@ -52,6 +52,12 @@ public func CaptureServer() -> HttpServer {
         """ + $0.path)) }
     
     server[""] = { .ok(.htmlBody("""
+    <!DOCTYPE html>
+    <html><head>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
+
         <style>
             .rotate0 {
                 transform-origin:   rotate(0deg);
@@ -82,6 +88,8 @@ public func CaptureServer() -> HttpServer {
                 -o-transform:       rotate(270deg) scale(1.3);
             }
         </style>
+    </head>
+    <body>
         <div id="container" style="width:100%; height:100%">
             <img id="image" src="" style="width:100%; height:100%; object-fit:contain">
         </div>
@@ -142,7 +150,7 @@ public func CaptureServer() -> HttpServer {
             }, 500);
             
         </script>
-
+    </body>
     """ + $0.path)) }
     
 //    let publicDir = Bundle.main.resourcePath!
