@@ -101,13 +101,16 @@ public func CaptureServer() -> HttpServer {
             
             console.log(host);
 
+            var start = 0;
+
             function WebSocketTest() {
                 if ("WebSocket" in window) {
                     // Let us open a web socket
                     var ws = new WebSocket("ws://" + host + ":8080/websocket");
 
                     ws.onopen = function() {
-                        console.log("socket is connected")
+                        console.log("socket is connected");
+                        start = 0;
                     };
                     
                     ws.onmessage = function (event) {
@@ -120,6 +123,8 @@ public func CaptureServer() -> HttpServer {
                           
                             return;
                         }
+
+                        start = Date.now();
                         
                         var reader = new FileReader();
                         reader.readAsDataURL(event.data);
@@ -134,7 +139,7 @@ public func CaptureServer() -> HttpServer {
                     };
                     
                     ws.onclose = function() {
-                        
+                        start = 0;
                         // websocket is closed.
                         console.log("Connection is closed...");
                         setTimeout(function() {
@@ -155,6 +160,11 @@ public func CaptureServer() -> HttpServer {
             setTimeout(function() {
                    WebSocketTest();
             }, 500);
+
+            setInterval(function() {
+                if( start > 0 && Date.now() - start > 5000 )    // 5s not received
+                    location.reload();
+            }, 5000);
             
         </script>
     </body>
