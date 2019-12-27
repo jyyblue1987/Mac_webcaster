@@ -137,6 +137,13 @@ public func CaptureServer() -> HttpServer {
                         
                         // websocket is closed.
                         console.log("Connection is closed...");
+                        setTimeout(function() {
+                            WebSocketTest();
+                        }, 1000);
+                    };
+                    ws.onerror = function(err) {
+                        console.error(err);
+                        ws.close();
                     };
                 } else {
                     
