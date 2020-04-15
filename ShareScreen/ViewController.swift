@@ -23,6 +23,8 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     let appDelegate = NSApplication.shared.delegate as! AppDelegate
     let preferences = UserDefaults.standard
 
+    var inAppPurchaseController: BuyMembershipWindowController!
+    
     enum InterfaceStyle : String {
         case Dark, Light
 
@@ -167,7 +169,8 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 
 
     @IBAction func onShowHelp(sender : NSButton) {
-        self.presentAsSheet(sheetViewController)
+//        self.presentAsSheet(sheetViewController)
+        showIAPWindow()
     }
 
 
@@ -287,6 +290,27 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
                 sendDataToClient(array : intArray)
             }
         }
+    }
+    
+    func showIAPWindow()
+    {
+        if inAppPurchaseController == nil {
+            inAppPurchaseController = BuyMembershipWindowController.init(windowNibName: "BuyMembershipWindowController")
+        }
+        
+        inAppPurchaseController.setSubscriptionPlansFromStoreCompetionBlock { (isComplete, isTransactionSuccessful, planName) in
+            if isTransactionSuccessful {
+                print("Unlocked", planName)
+                
+                self.appDelegate.subscriptionIsDoneSuccessfully(withPlan: planName)
+            }
+            
+            if isComplete {
+                self.inAppPurchaseController = nil
+            }
+        }
+        
+        inAppPurchaseController.showWindow(nil)
     }
 
 }

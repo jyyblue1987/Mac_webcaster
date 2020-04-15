@@ -13,5 +13,6 @@
 
 #import "InAppPurchaseStateChangeProtocol.h"
 #import "ALTransationsManager.h"
+#import "BuyMembershipWindowController.h"
 
 #endif /* Bridge_h */
