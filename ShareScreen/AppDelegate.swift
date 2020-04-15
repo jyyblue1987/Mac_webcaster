@@ -10,7 +10,7 @@ import Cocoa
 import StoreKit
 
 @NSApplicationMain
-class AppDelegate : NSObject, NSApplicationDelegate {
+class AppDelegate : NSObject, NSApplicationDelegate, InAppPurchaseStateChangeProtocol {
 
     @IBOutlet weak var menu_refreshtime : NSMenuItem!
     @IBOutlet weak var menu_framerate   : NSMenuItem!
@@ -27,6 +27,9 @@ class AppDelegate : NSObject, NSApplicationDelegate {
     var refreshtime_arr   : [String] = []
     var framerate_arr     : [String] = []
 
+    @objc
+    var transactionObserver: ALTransationsManager!
+    
     func applicationDidFinishLaunching(_ aNotification : Notification) {
         // Insert code here to initialize your application
 //        menu_refreshtime.isEnabled = true
@@ -42,6 +45,7 @@ class AppDelegate : NSObject, NSApplicationDelegate {
 //        menuItem = settings_menu.addItem(withTitle : "vvvv", action : nil, keyEquivalent : "")
 //        submenu = NSMenu(title : NSLocalizedString("vvvv",  comment : "vvvv menu"))
 //        settings_menu.setSubmenu(submenu, for : menuItem)
+        
 
         refreshtime_arr = [
             "OFF",
@@ -376,5 +380,18 @@ class AppDelegate : NSObject, NSApplicationDelegate {
         preferences.set(10, forKey : "framerate_value")
         preferences.synchronize()
     }
+    
+    @objc func subscriptionIsDoneSuccessfully(withPlan planID: String!) {
+        
+    }
+    
+    @objc func subscriptionIsRestoredSuccessfully(withPlan planId: String!) {
+            
+    }
+    
+    @objc func activatePremiumMembership() {
+        
+    }
+    
 
 }

@@ -41,6 +41,17 @@
 		8497772D23EB4001001E6C2D /* sketch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8497772C23EB4001001E6C2D /* sketch.png */; };
 		84C2A67A23D1AD4E00E02CAB /* circle_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2A67823D1AD4E00E02CAB /* circle_enable.png */; };
 		84C2A67B23D1AD4E00E02CAB /* circle_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2A67923D1AD4E00E02CAB /* circle_disable.png */; };
+		84FD592024469EE5004B0DA2 /* BuyMembershipWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD591624469EE5004B0DA2 /* BuyMembershipWindowController.m */; };
+		84FD592124469EE5004B0DA2 /* BuyMembershipWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FD591724469EE5004B0DA2 /* BuyMembershipWindowController.xib */; };
+		84FD592224469EE5004B0DA2 /* SSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD591924469EE5004B0DA2 /* SSCustomButton.m */; };
+		84FD592324469EE5004B0DA2 /* SSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD591A24469EE5004B0DA2 /* SSTextField.m */; };
+		84FD592424469EE5004B0DA2 /* SSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD591B24469EE5004B0DA2 /* SSView.m */; };
+		84FD593624469FE6004B0DA2 /* SKProduct+SSPriceConvertion.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592724469FE6004B0DA2 /* SKProduct+SSPriceConvertion.m */; };
+		84FD593724469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592924469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.m */; };
+		84FD593824469FE6004B0DA2 /* ALTransationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592C24469FE6004B0DA2 /* ALTransationsManager.m */; };
+		84FD593924469FE6004B0DA2 /* ALStoreListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592E24469FE6004B0DA2 /* ALStoreListController.m */; };
+		84FD593A24469FE6004B0DA2 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592F24469FE6004B0DA2 /* Constants.m */; };
+		84FD593B24469FE6004B0DA2 /* JSReceiptRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD593224469FE6004B0DA2 /* JSReceiptRefreshRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +92,30 @@
 		8497772C23EB4001001E6C2D /* sketch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sketch.png; sourceTree = "<group>"; };
 		84C2A67823D1AD4E00E02CAB /* circle_enable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_enable.png; sourceTree = "<group>"; };
 		84C2A67923D1AD4E00E02CAB /* circle_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_disable.png; sourceTree = "<group>"; };
+		84FD591624469EE5004B0DA2 /* BuyMembershipWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyMembershipWindowController.m; sourceTree = "<group>"; };
+		84FD591724469EE5004B0DA2 /* BuyMembershipWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyMembershipWindowController.xib; sourceTree = "<group>"; };
+		84FD591924469EE5004B0DA2 /* SSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCustomButton.m; sourceTree = "<group>"; };
+		84FD591A24469EE5004B0DA2 /* SSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTextField.m; sourceTree = "<group>"; };
+		84FD591B24469EE5004B0DA2 /* SSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSView.m; sourceTree = "<group>"; };
+		84FD591C24469EE5004B0DA2 /* SSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTextField.h; sourceTree = "<group>"; };
+		84FD591D24469EE5004B0DA2 /* SSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCustomButton.h; sourceTree = "<group>"; };
+		84FD591E24469EE5004B0DA2 /* SSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSView.h; sourceTree = "<group>"; };
+		84FD591F24469EE5004B0DA2 /* BuyMembershipWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyMembershipWindowController.h; sourceTree = "<group>"; };
+		84FD592724469FE6004B0DA2 /* SKProduct+SSPriceConvertion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+SSPriceConvertion.m"; sourceTree = "<group>"; };
+		84FD592824469FE6004B0DA2 /* ALTransationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTransationsManager.h; sourceTree = "<group>"; };
+		84FD592924469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALTransationsManager+AppDeletageInstance.m"; sourceTree = "<group>"; };
+		84FD592A24469FE6004B0DA2 /* ALStoreListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALStoreListController.h; sourceTree = "<group>"; };
+		84FD592B24469FE6004B0DA2 /* SKProduct+SSPriceConvertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+SSPriceConvertion.h"; sourceTree = "<group>"; };
+		84FD592C24469FE6004B0DA2 /* ALTransationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTransationsManager.m; sourceTree = "<group>"; };
+		84FD592D24469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALTransationsManager+AppDeletageInstance.h"; sourceTree = "<group>"; };
+		84FD592E24469FE6004B0DA2 /* ALStoreListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALStoreListController.m; sourceTree = "<group>"; };
+		84FD592F24469FE6004B0DA2 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		84FD593024469FE6004B0DA2 /* InAppPurchaseStateChangeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseStateChangeProtocol.h; sourceTree = "<group>"; };
+		84FD593224469FE6004B0DA2 /* JSReceiptRefreshRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSReceiptRefreshRequest.m; sourceTree = "<group>"; };
+		84FD593324469FE6004B0DA2 /* JSReceiptRefreshRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSReceiptRefreshRequest.h; sourceTree = "<group>"; };
+		84FD593424469FE6004B0DA2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		84FD593524469FE6004B0DA2 /* SKProduct+SSPriceConvertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+SSPriceConvertion.h"; sourceTree = "<group>"; };
+		84FD593C2446A30B004B0DA2 /* Screen_Mirror_to_TV___Device-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Screen_Mirror_to_TV___Device-Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +150,8 @@
 			children = (
 				848C35BD2382B1E8005462D4 /* library */,
 				84E0B81523896103008EC228 /* resource */,
+				84FD591524469EE5004B0DA2 /* BuyMembershipController */,
+				84FD592524469FE6004B0DA2 /* In-App Purchase */,
 				848C35AC2382AB8C005462D4 /* AppDelegate.swift */,
 				848C35BC2382B1E8005462D4 /* CaptureServer.swift */,
 				848C35AE2382AB8C005462D4 /* ViewController.swift */,
@@ -123,6 +160,7 @@
 				848C35B52382AB8E005462D4 /* Info.plist */,
 				848C35B62382AB8E005462D4 /* ShareScreen.entitlements */,
 				840955F623D303410035D7FA /* MainWindowsController.swift */,
+				84FD593C2446A30B004B0DA2 /* Screen_Mirror_to_TV___Device-Bridge-Header.h */,
 			);
 			path = ShareScreen;
 			sourceTree = "<group>";
@@ -169,6 +207,68 @@
 			name = resource;
 			path = ShareScreen/resource;
 			sourceTree = SOURCE_ROOT;
+		};
+		84FD591524469EE5004B0DA2 /* BuyMembershipController */ = {
+			isa = PBXGroup;
+			children = (
+				84FD591624469EE5004B0DA2 /* BuyMembershipWindowController.m */,
+				84FD591724469EE5004B0DA2 /* BuyMembershipWindowController.xib */,
+				84FD591824469EE5004B0DA2 /* CocoaCustom */,
+				84FD591F24469EE5004B0DA2 /* BuyMembershipWindowController.h */,
+			);
+			path = BuyMembershipController;
+			sourceTree = "<group>";
+		};
+		84FD591824469EE5004B0DA2 /* CocoaCustom */ = {
+			isa = PBXGroup;
+			children = (
+				84FD591924469EE5004B0DA2 /* SSCustomButton.m */,
+				84FD591A24469EE5004B0DA2 /* SSTextField.m */,
+				84FD591B24469EE5004B0DA2 /* SSView.m */,
+				84FD591C24469EE5004B0DA2 /* SSTextField.h */,
+				84FD591D24469EE5004B0DA2 /* SSCustomButton.h */,
+				84FD591E24469EE5004B0DA2 /* SSView.h */,
+			);
+			path = CocoaCustom;
+			sourceTree = "<group>";
+		};
+		84FD592524469FE6004B0DA2 /* In-App Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				84FD592624469FE6004B0DA2 /* StoreKitManagers */,
+				84FD592F24469FE6004B0DA2 /* Constants.m */,
+				84FD593024469FE6004B0DA2 /* InAppPurchaseStateChangeProtocol.h */,
+				84FD593124469FE6004B0DA2 /* RefreshReciptHandler */,
+				84FD593424469FE6004B0DA2 /* Constants.h */,
+				84FD593524469FE6004B0DA2 /* SKProduct+SSPriceConvertion.h */,
+			);
+			name = "In-App Purchase";
+			path = "ShareScreen/In-App Purchase";
+			sourceTree = SOURCE_ROOT;
+		};
+		84FD592624469FE6004B0DA2 /* StoreKitManagers */ = {
+			isa = PBXGroup;
+			children = (
+				84FD592724469FE6004B0DA2 /* SKProduct+SSPriceConvertion.m */,
+				84FD592824469FE6004B0DA2 /* ALTransationsManager.h */,
+				84FD592924469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.m */,
+				84FD592A24469FE6004B0DA2 /* ALStoreListController.h */,
+				84FD592B24469FE6004B0DA2 /* SKProduct+SSPriceConvertion.h */,
+				84FD592C24469FE6004B0DA2 /* ALTransationsManager.m */,
+				84FD592D24469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.h */,
+				84FD592E24469FE6004B0DA2 /* ALStoreListController.m */,
+			);
+			path = StoreKitManagers;
+			sourceTree = "<group>";
+		};
+		84FD593124469FE6004B0DA2 /* RefreshReciptHandler */ = {
+			isa = PBXGroup;
+			children = (
+				84FD593224469FE6004B0DA2 /* JSReceiptRefreshRequest.m */,
+				84FD593324469FE6004B0DA2 /* JSReceiptRefreshRequest.h */,
+			);
+			path = RefreshReciptHandler;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -235,6 +335,7 @@
 			files = (
 				8497772D23EB4001001E6C2D /* sketch.png in Resources */,
 				84C2A67A23D1AD4E00E02CAB /* circle_enable.png in Resources */,
+				84FD592124469EE5004B0DA2 /* BuyMembershipWindowController.xib in Resources */,
 				848C35B12382AB8E005462D4 /* Assets.xcassets in Resources */,
 				84C2A67B23D1AD4E00E02CAB /* circle_disable.png in Resources */,
 				8497597423D6020C007DC2A5 /* share_light.png in Resources */,
@@ -257,21 +358,31 @@
 				848C35DE2382B1E8005462D4 /* Socket+File.swift in Sources */,
 				848C35D42382B1E8005462D4 /* HttpServerIO.swift in Sources */,
 				848C35D92382B1E8005462D4 /* Files.swift in Sources */,
+				84FD593A24469FE6004B0DA2 /* Constants.m in Sources */,
 				848C35D72382B1E8005462D4 /* String+SHA1.swift in Sources */,
 				848C35DB2382B1E8005462D4 /* HttpResponse.swift in Sources */,
+				84FD593924469FE6004B0DA2 /* ALStoreListController.m in Sources */,
+				84FD592324469EE5004B0DA2 /* SSTextField.m in Sources */,
 				848C35D62382B1E8005462D4 /* Socket+Server.swift in Sources */,
+				84FD593824469FE6004B0DA2 /* ALTransationsManager.m in Sources */,
 				848C35E42382B1E8005462D4 /* Socket.swift in Sources */,
+				84FD593724469FE6004B0DA2 /* ALTransationsManager+AppDeletageInstance.m in Sources */,
 				848C35E12382B1E8005462D4 /* HttpRouter.swift in Sources */,
 				848C35D32382B1E8005462D4 /* WebSockets.swift in Sources */,
+				84FD593624469FE6004B0DA2 /* SKProduct+SSPriceConvertion.m in Sources */,
 				848C35E22382B1E8005462D4 /* HttpParser.swift in Sources */,
 				840955F723D303410035D7FA /* MainWindowsController.swift in Sources */,
 				848C35DA2382B1E8005462D4 /* HttpRequest.swift in Sources */,
 				848C35D82382B1E8005462D4 /* String+File.swift in Sources */,
+				84FD593B24469FE6004B0DA2 /* JSReceiptRefreshRequest.m in Sources */,
 				848C35D22382B1E8005462D4 /* Scopes.swift in Sources */,
 				848C35D12382B1E8005462D4 /* CaptureServer.swift in Sources */,
 				848C35E32382B1E8005462D4 /* MimeTypes.swift in Sources */,
 				848C35DD2382B1E8005462D4 /* Errno.swift in Sources */,
+				84FD592224469EE5004B0DA2 /* SSCustomButton.m in Sources */,
 				848C35DC2382B1E8005462D4 /* HttpServer.swift in Sources */,
+				84FD592424469EE5004B0DA2 /* SSView.m in Sources */,
+				84FD592024469EE5004B0DA2 /* BuyMembershipWindowController.m in Sources */,
 				848C35AF2382AB8C005462D4 /* ViewController.swift in Sources */,
 				848C35AD2382AB8C005462D4 /* AppDelegate.swift in Sources */,
 				848C35DF2382B1E8005462D4 /* String+BASE64.swift in Sources */,
@@ -424,6 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.displayapp;
 				PRODUCT_NAME = "Screen Mirror to TV & Device";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ShareScreen/Screen_Mirror_to_TV___Device-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -445,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.displayapp;
 				PRODUCT_NAME = "Screen Mirror to TV & Device";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ShareScreen/Screen_Mirror_to_TV___Device-Bridge-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
