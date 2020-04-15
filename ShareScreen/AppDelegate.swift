@@ -12,6 +12,7 @@ import StoreKit
 @NSApplicationMain
 class AppDelegate : NSObject, NSApplicationDelegate, InAppPurchaseStateChangeProtocol {
 
+    // com.app.displayapp
     @IBOutlet weak var menu_refreshtime : NSMenuItem!
     @IBOutlet weak var menu_framerate   : NSMenuItem!
 
@@ -135,6 +136,8 @@ class AppDelegate : NSObject, NSApplicationDelegate, InAppPurchaseStateChangePro
         } else {
             //Nothing to do
         }
+        
+//        ALTransationsManager.init()
     }
 
     func applicationWillTerminate(_ aNotification : Notification) {

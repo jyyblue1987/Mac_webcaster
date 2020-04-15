@@ -52,6 +52,7 @@
 		84FD593924469FE6004B0DA2 /* ALStoreListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592E24469FE6004B0DA2 /* ALStoreListController.m */; };
 		84FD593A24469FE6004B0DA2 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD592F24469FE6004B0DA2 /* Constants.m */; };
 		84FD593B24469FE6004B0DA2 /* JSReceiptRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD593224469FE6004B0DA2 /* JSReceiptRefreshRequest.m */; };
+		84FD593F2446AC36004B0DA2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD593E2446AC36004B0DA2 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		84FD593424469FE6004B0DA2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		84FD593524469FE6004B0DA2 /* SKProduct+SSPriceConvertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+SSPriceConvertion.h"; sourceTree = "<group>"; };
 		84FD593C2446A30B004B0DA2 /* Screen_Mirror_to_TV___Device-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Screen_Mirror_to_TV___Device-Bridge-Header.h"; sourceTree = "<group>"; };
+		84FD593E2446AC36004B0DA2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FD593F2446AC36004B0DA2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +137,7 @@
 			children = (
 				848C35AB2382AB8C005462D4 /* ShareScreen */,
 				848C35AA2382AB8C005462D4 /* Products */,
+				84FD593D2446AC36004B0DA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +272,14 @@
 				84FD593324469FE6004B0DA2 /* JSReceiptRefreshRequest.h */,
 			);
 			path = RefreshReciptHandler;
+			sourceTree = "<group>";
+		};
+		84FD593D2446AC36004B0DA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84FD593E2446AC36004B0DA2 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.displayapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.corebits.smartReminder;
 				PRODUCT_NAME = "Screen Mirror to TV & Device";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ShareScreen/Screen_Mirror_to_TV___Device-Bridge-Header.h";
@@ -554,7 +566,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.displayapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.corebits.smartReminder;
 				PRODUCT_NAME = "Screen Mirror to TV & Device";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ShareScreen/Screen_Mirror_to_TV___Device-Bridge-Header.h";
