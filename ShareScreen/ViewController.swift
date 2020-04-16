@@ -106,6 +106,13 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 //        initScreenCapture()
         
         checkAndShowReminder()
+        
+        let attr = [
+                 NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+             ]
+        
+        btnGetPremium.attributedTitle = NSAttributedString(string: "Get Premium Now!", attributes: attr)
+        
         checkGUI()
     }
     
@@ -114,7 +121,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
         let iap_valid = iap_flag != 0
         lblWarnMessage.isHidden = iap_valid
-        lblWarnMessage.isHidden = iap_valid
+        btnGetPremium.isHidden = iap_valid
     }
     
     func loadTrialImage()
