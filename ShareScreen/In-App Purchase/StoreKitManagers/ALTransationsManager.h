@@ -26,6 +26,6 @@ typedef void (^ALTransationCompletion)(SKPaymentTransaction *transaction, ALPURC
 
 - (void)restoreProductsWitherrorMessageBlock: (void (^)(NSString *errorMessage))errorBlock;
 
-
++ (id)sharedInstance;
 
 @end

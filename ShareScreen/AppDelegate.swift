@@ -137,7 +137,7 @@ class AppDelegate : NSObject, NSApplicationDelegate, InAppPurchaseStateChangePro
             //Nothing to do
         }
         
-//        ALTransationsManager.init()
+        ALTransationsManager.sharedInstance()
     }
 
     func applicationWillTerminate(_ aNotification : Notification) {

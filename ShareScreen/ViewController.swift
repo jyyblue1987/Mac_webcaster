@@ -46,7 +46,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     private var currentfr : Int = 0
     private var countfr   : Double = 0
     private let max_frame_rate : Int = 20
-
+  
     lazy var sheetViewController : NSViewController = {
         return self.storyboard!.instantiateController(withIdentifier : "SheetViewController") as! NSViewController
     } ()
@@ -72,8 +72,12 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         host_url.stringValue = "http://" + getIpAddress() + ":8080"
 //        host_url.textColor = NSColor.black
         framerate_lbl.stringValue = String(preferences.integer(forKey : "framerate_value"))
-//        launchServer()
+        launchServer()
 //        initScreenCapture()
+    }
+    
+    override func viewDidDisappear() {
+        self.server?.stop()
     }
 
 /*
@@ -169,8 +173,8 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 
 
     @IBAction func onShowHelp(sender : NSButton) {
-//        self.presentAsSheet(sheetViewController)
-        showIAPWindow()
+        self.presentAsSheet(sheetViewController)
+//        showIAPWindow()
     }
 
 
@@ -181,7 +185,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 
     func actionCatpure() {
         if session!.isRunning {
-            self.server?.stop()
+            
             session?.stopRunning()
             session?.removeInput(input!)
             session?.removeOutput(output!)
@@ -192,7 +196,6 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
             appDelegate.menu_framerate.isEnabled = true
         }
         else {
-            launchServer()
             initScreenCapture()
             session?.startRunning()
 //            btnStartOrStop.image = NSImage(named : "circle_disable.png")
@@ -301,7 +304,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         inAppPurchaseController.setSubscriptionPlansFromStoreCompetionBlock { (isComplete, isTransactionSuccessful, planName) in
             if isTransactionSuccessful {
                 print("Unlocked", planName)
-                
+                self.preferences.set(1, forKey : "iap")
                 self.appDelegate.subscriptionIsDoneSuccessfully(withPlan: planName)
             }
             

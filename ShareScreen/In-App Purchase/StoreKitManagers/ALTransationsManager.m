@@ -24,6 +24,9 @@
 
 @implementation ALTransationsManager
 
++ (id)sharedInstance {
+    return [ALTransationsManager appDelegateRetainedInstance];
+}
 
 - (instancetype)init
 {
