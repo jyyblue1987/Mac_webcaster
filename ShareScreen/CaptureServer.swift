@@ -49,6 +49,32 @@ public func sendDataToClient(array : [Int8]) -> Int {
     return totalSize
 }
 
+public func sendDataToClient(array : [UInt8]) -> Int {
+    var totalSize : Int = 0
+
+    let curTime : Double = NSDate().timeIntervalSince1970
+    lock.lock()
+    for (index, session) in g_sessionList.enumerated() {
+
+        let gap = curTime - g_timeList[index]
+        if (g_readyList[index] == true || gap > 10) {
+            // send ready or timeout
+            g_readyList[index] = false
+            g_timeList[index] = curTime
+
+            session.writeBinary(array)
+
+            totalSize = totalSize + array.count
+            print("Index = ", index, "Send Size = ", array.count, "Time Interval = ", gap)
+        }
+        else {
+            print("Not Ready = ", index)
+        }
+    }
+    lock.unlock()
+   
+    return totalSize
+}
 
 public func CaptureServer() -> HttpServer {
 

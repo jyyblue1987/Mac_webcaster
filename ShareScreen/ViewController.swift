@@ -67,6 +67,10 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     private var currentfr : Int = 0
     private var countfr   : Double = 0
     private let max_frame_rate : Int = 20
+    
+    var intTimeStamp : TimeInterval = 0
+    var isBroadcastingStarted : Bool = false
+    var trialImageData : Data?
   
     lazy var sheetViewController : NSViewController = {
         return self.storyboard!.instantiateController(withIdentifier : "SheetViewController") as! NSViewController
@@ -93,19 +97,27 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         host_url.stringValue = "http://" + getIpAddress() + ":8080"
 //        host_url.textColor = NSColor.black
         framerate_lbl.stringValue = String(preferences.integer(forKey : "framerate_value"))
+        
+        loadTrialImage()
+        
         launchServer()
 //        initScreenCapture()
         
         checkAndShowReminder()
     }
     
+    func loadTrialImage()
+    {
+        let freetrial = NSImage.Name("freetrial")
+        let nsImage = NSImage(named: freetrial)!
+        trialImageData = nsImage.tiffRepresentation
+    }
+    
     override func viewDidDisappear() {
         self.server?.stop()
     }
     
-    func checkAndShowPrompt() {
-        
-    }
+  
     
     func checkAndShowReminder() {
         let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
@@ -263,6 +275,9 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         btnStartOrStop.title = "Stop"
         appDelegate.menu_refreshtime.isEnabled = false
         appDelegate.menu_framerate.isEnabled = false
+        
+        intTimeStamp = Date().timeIntervalSince1970
+        self.isBroadcastingStarted = true
     }
 
 
@@ -330,11 +345,45 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 
     func captureOutput(_ output : AVCaptureOutput, didOutput sampleBuffer : CMSampleBuffer, from connection : AVCaptureConnection) {
 
+        let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
+        if iap_flag == 0 {
+            if self.isBroadcastingStarted {
+                if self.intTimeStamp + 20 < Date().timeIntervalSince1970 {  // auto-stop after 60 seconds
+                    self.intTimeStamp = Date().timeIntervalSince1970
+                    self.isBroadcastingStarted = false
+                    
+                    self.showIAPWindow()
+                    return
+                }
+                
+                
+            } else {    // auto-start after 120s
+                if self.intTimeStamp + 120 < Date().timeIntervalSince1970 {
+                    self.intTimeStamp = Date().timeIntervalSince1970
+                    self.isBroadcastingStarted = true
+                }
+                else // after auto-stop
+                {
+                    var array = [UInt8]()
+                    array.append(contentsOf: self.trialImageData!)
+                 
+                    countfr += 1
+                    print(countfr)
+                    if (countfr >= Double(max_frame_rate) / Double(currentfr)) {
+                        countfr -= Double(max_frame_rate) / Double(currentfr)
+                        print(countfr)
+                        sendDataToClient(array : array)
+                    }
+                }
+                return
+            }
+        }
+        
         if CMSampleBufferDataIsReady(sampleBuffer) != true {
             print("sampleBuffer data is not ready")
             return
         }
-
+        
         // handle frame data
         guard let dataBuffer = CMSampleBufferGetDataBuffer(sampleBuffer) else {
             return
@@ -353,6 +402,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
                 sendDataToClient(array : intArray)
             }
         }
+        
     }
     
     func showIAPWindow()
