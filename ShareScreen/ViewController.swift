@@ -38,6 +38,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     @IBOutlet weak var btnStartOrStop   : NSButton!
     @IBOutlet weak var btnHelp   : NSButton!
     @IBOutlet weak var btnExit   : NSButton!
+    @IBOutlet weak var btnGetPremium   : NSButton!
 
     @IBOutlet weak var framerate_lbl : NSTextField!
 
@@ -104,6 +105,12 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 //        initScreenCapture()
         
         checkAndShowReminder()
+    }
+    
+    func initUI()
+    {
+        let pstyle = NSMutableParagraphStyle()
+        pstyle.alignment = .center
     }
     
     func loadTrialImage()
@@ -229,6 +236,11 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     @IBAction func onHideHelp(sender : NSButton) {
 //        self.dismiss(sheetViewController)
     }
+    
+    @IBAction func onBtnGetPremium(sender : NSButton) {
+        showIAPWindow()
+    }
+
 
 
     func actionCatpure() {
@@ -350,7 +362,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
         if iap_flag == 0 {
             if self.isBroadcastingStarted {
-                if self.intTimeStamp + 20 < Date().timeIntervalSince1970 {  // auto-stop after 60 seconds
+                if self.intTimeStamp + 60 < Date().timeIntervalSince1970 {  // auto-stop after 60 seconds
                     self.intTimeStamp = Date().timeIntervalSince1970
                     self.isBroadcastingStarted = false
                     

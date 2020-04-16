@@ -782,7 +782,7 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="e4K-uI-Wgh">
-                                <rect key="frame" x="245" y="348" width="20" height="20"/>
+                                <rect key="frame" x="245" y="343" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="HyD-Mg-dcp"/>
                                     <constraint firstAttribute="height" constant="20" id="tXv-OY-cln"/>
@@ -842,12 +842,43 @@
                                     <action selector="onBtnShareWithSender:" target="rPt-NT-nkU" id="yJc-ML-0e6"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-lJ-T2H">
+                                <rect key="frame" x="25" y="367" width="235" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Trial Limit: 60-Seconds Mirroring Only" id="Hbm-Oa-0iI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-uQ-mrY">
+                                <rect key="frame" x="137" y="97" width="13" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lW9-l5-REd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-4R-WcY">
+                                <rect key="frame" x="81" y="91" width="122" height="32"/>
+                                <buttonCell key="cell" type="bevel" title="Get Premium Now!" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="mzX-zh-B2Q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="onBtnGetPremiumWithSender:" target="XfG-lQ-9wD" id="2Kb-eU-gqU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="WMQ-JW-2fc" firstAttribute="bottom" secondItem="0hZ-IL-2Fw" secondAttribute="bottom" constant="-1" id="0vi-j9-coP"/>
+                            <constraint firstItem="3Sl-lJ-T2H" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="2sO-z2-Siu"/>
                             <constraint firstItem="1eS-1N-XCo" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="72" id="9AR-L6-YJq"/>
                             <constraint firstItem="1eS-1N-XCo" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="45" id="9mJ-Sv-gpE"/>
+                            <constraint firstItem="V9t-4R-WcY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="AXM-dA-sLP"/>
                             <constraint firstItem="e4K-uI-Wgh" firstAttribute="leading" secondItem="sC8-67-v9a" secondAttribute="leading" id="B1c-le-PTF"/>
+                            <constraint firstItem="3Sl-lJ-T2H" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="JaZ-hY-qJY"/>
+                            <constraint firstItem="2dg-Jf-m50" firstAttribute="top" secondItem="V9t-4R-WcY" secondAttribute="bottom" constant="5" id="MGW-CS-3Cl"/>
                             <constraint firstItem="WMQ-JW-2fc" firstAttribute="leading" secondItem="0hZ-IL-2Fw" secondAttribute="trailing" constant="5" id="N1n-g5-9NY"/>
                             <constraint firstAttribute="trailing" secondItem="e4K-uI-Wgh" secondAttribute="trailing" constant="20" id="OfD-gy-lXA"/>
                             <constraint firstItem="WMQ-JW-2fc" firstAttribute="top" secondItem="0hZ-IL-2Fw" secondAttribute="top" constant="-1" id="Ooy-eg-Eor"/>
@@ -861,7 +892,8 @@
                             <constraint firstItem="y26-eQ-lbX" firstAttribute="top" secondItem="1eS-1N-XCo" secondAttribute="bottom" constant="20" id="a7z-3H-6mP"/>
                             <constraint firstItem="0hZ-IL-2Fw" firstAttribute="top" secondItem="2r9-1I-Ikm" secondAttribute="bottom" constant="8" symbolic="YES" id="cQf-vB-iod"/>
                             <constraint firstItem="y26-eQ-lbX" firstAttribute="trailing" secondItem="2r9-1I-Ikm" secondAttribute="trailing" id="fXG-28-Egb"/>
-                            <constraint firstItem="e4K-uI-Wgh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="h62-v9-ugb"/>
+                            <constraint firstItem="e4K-uI-Wgh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="25" id="h62-v9-ugb"/>
+                            <constraint firstItem="V9t-4R-WcY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="iTb-AR-dV0"/>
                             <constraint firstAttribute="bottom" secondItem="sC8-67-v9a" secondAttribute="bottom" constant="20" id="jQS-Cp-YK4"/>
                             <constraint firstItem="0hZ-IL-2Fw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="33" id="k66-ei-nOh"/>
                             <constraint firstAttribute="bottom" secondItem="2dg-Jf-m50" secondAttribute="bottom" constant="47" id="q54-7y-HnN"/>
@@ -873,6 +905,7 @@
                     </view>
                     <connections>
                         <outlet property="btnExit" destination="sC8-67-v9a" id="xea-TP-8qM"/>
+                        <outlet property="btnGetPremium" destination="V9t-4R-WcY" id="TnO-eM-0xi"/>
                         <outlet property="btnHelp" destination="e4K-uI-Wgh" id="uK0-SG-bh4"/>
                         <outlet property="btnShare" destination="WMQ-JW-2fc" id="tqx-tb-fAO"/>
                         <outlet property="btnStartOrStop" destination="2dg-Jf-m50" id="TVR-QX-6Ec"/>
