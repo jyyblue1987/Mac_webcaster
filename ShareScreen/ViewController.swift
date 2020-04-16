@@ -9,6 +9,27 @@
 import Cocoa
 import AVFoundation
 
+let kIAPFlag  = "iap_flag"
+
+extension UserDefaults {
+
+    public func optionalInt(forKey defaultName: String) -> Int? {
+        let defaults = self
+        if let value = defaults.value(forKey: defaultName) {
+            return value as? Int
+        }
+        return nil
+    }
+
+    public func optionalBool(forKey defaultName: String) -> Bool? {
+        let defaults = self
+        if let value = defaults.value(forKey: defaultName) {
+            return value as? Bool
+        }
+        return nil
+    }
+}
+
 
 class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 //    @IBOutlet weak var container : NSView!
@@ -74,10 +95,23 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         framerate_lbl.stringValue = String(preferences.integer(forKey : "framerate_value"))
         launchServer()
 //        initScreenCapture()
+        
+        checkAndShowReminder()
     }
     
     override func viewDidDisappear() {
         self.server?.stop()
+    }
+    
+    func checkAndShowPrompt() {
+        
+    }
+    
+    func checkAndShowReminder() {
+        let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
+        if iap_flag == 0 {
+            showIAPWindow()
+        }
     }
 
 /*
@@ -196,13 +230,39 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
             appDelegate.menu_framerate.isEnabled = true
         }
         else {
-            initScreenCapture()
-            session?.startRunning()
-//            btnStartOrStop.image = NSImage(named : "circle_disable.png")
-            btnStartOrStop.title = "Stop"
-            appDelegate.menu_refreshtime.isEnabled = false
-            appDelegate.menu_framerate.isEnabled = false
+            let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
+            if iap_flag == 0 {
+                let alert = NSAlert()
+                alert.messageText = "Free Trial"
+                alert.informativeText = "The Free version will only mirror for 60 seconds. Please upgrade to the Premium Version!"
+                alert.addButton(withTitle: "Trial")
+                alert.addButton(withTitle: "Upgrade Now!")
+                alert.beginSheetModal(for: self.view.window!) { (response) in
+                    if( response == .alertFirstButtonReturn )
+                    {
+                        self.startCapture()
+                    }
+                    else if (response == .alertSecondButtonReturn )
+                    {
+                        self.showIAPWindow()
+                    }
+                    
+                }
+            }
+            else
+            {
+                startCapture()
+            }
         }
+    }
+    
+    func startCapture()
+    {
+        initScreenCapture()
+        session?.startRunning()
+        btnStartOrStop.title = "Stop"
+        appDelegate.menu_refreshtime.isEnabled = false
+        appDelegate.menu_framerate.isEnabled = false
     }
 
 
@@ -304,7 +364,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         inAppPurchaseController.setSubscriptionPlansFromStoreCompetionBlock { (isComplete, isTransactionSuccessful, planName) in
             if isTransactionSuccessful {
                 print("Unlocked", planName)
-                self.preferences.set(1, forKey : "iap")
+                self.preferences.set(1, forKey : kIAPFlag)
                 self.appDelegate.subscriptionIsDoneSuccessfully(withPlan: planName)
             }
             
