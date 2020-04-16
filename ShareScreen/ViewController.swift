@@ -39,7 +39,8 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     @IBOutlet weak var btnHelp   : NSButton!
     @IBOutlet weak var btnExit   : NSButton!
     @IBOutlet weak var btnGetPremium   : NSButton!
-
+    @IBOutlet weak var lblWarnMessage  : NSTextField!
+    
     @IBOutlet weak var framerate_lbl : NSTextField!
 
     let appDelegate = NSApplication.shared.delegate as! AppDelegate
@@ -105,12 +106,15 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
 //        initScreenCapture()
         
         checkAndShowReminder()
+        checkGUI()
     }
     
-    func initUI()
+    func checkGUI()
     {
-        let pstyle = NSMutableParagraphStyle()
-        pstyle.alignment = .center
+        let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
+        let iap_valid = iap_flag != 0
+        lblWarnMessage.isHidden = iap_valid
+        lblWarnMessage.isHidden = iap_valid
     }
     
     func loadTrialImage()
@@ -430,6 +434,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
                 print("Unlocked", planName)
                 self.preferences.set(1, forKey : kIAPFlag)
                 self.appDelegate.subscriptionIsDoneSuccessfully(withPlan: planName)
+                self.checkGUI()
             }
             
             if isComplete {

@@ -18,7 +18,7 @@ NSString * const InAppPremiumPlan =  @"com.CoreBits.smartReminder.premium";
     NSAlert *alert = [[NSAlert alloc] init];
     
     [alert addButtonWithTitle:@"OK"];//will generate a return code of 1002
-    [alert setMessageText:@"In-App Purchase Sample"];
+    [alert setMessageText:@"Screen Mirror to TV & Device"];
     [alert setInformativeText:message];
     [alert setAlertStyle:NSAlertStyleInformational];
     [alert runModal];

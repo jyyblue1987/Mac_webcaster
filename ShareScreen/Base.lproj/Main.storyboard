@@ -911,6 +911,7 @@
                         <outlet property="btnStartOrStop" destination="2dg-Jf-m50" id="TVR-QX-6Ec"/>
                         <outlet property="framerate_lbl" destination="1SZ-sl-hV2" id="qDT-32-XW7"/>
                         <outlet property="host_url" destination="0hZ-IL-2Fw" id="YgR-Mh-hLH"/>
+                        <outlet property="lblWarnMessage" destination="3Sl-lJ-T2H" id="2jE-47-Bws"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -161,7 +161,7 @@ typedef void (^ALSubscriptionCompletion)(BOOL isComplete, BOOL isTransactionSucc
                 case ALPURCHASESTATE_SUCCESS_RESTORED:
                 {
                     [self hideLoader];
-                    self.subscriptionCompletionBlock(YES,YES,@"In-App Purchase Sample");
+                    self.subscriptionCompletionBlock(YES,YES,@"Screen Mirror to TV & Device");
                     
                     [self.window orderOut:nil];
                     [NSApp endSheet:self.window];
