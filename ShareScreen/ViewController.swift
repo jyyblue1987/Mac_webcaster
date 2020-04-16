@@ -110,7 +110,9 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     {
         let freetrial = NSImage.Name("freetrial")
         let nsImage = NSImage(named: freetrial)!
-        trialImageData = nsImage.tiffRepresentation
+        let cgImage = nsImage.cgImage(forProposedRect: nil, context: nil, hints: nil)!
+        let bitmapRep = NSBitmapImageRep(cgImage: cgImage)
+        trialImageData = bitmapRep.representation(using: .jpeg, properties: [:])
     }
     
     override func viewDidDisappear() {
