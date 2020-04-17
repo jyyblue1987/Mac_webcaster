@@ -133,7 +133,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QtA-im-IfR">
-                                <rect key="frame" x="28" y="6" width="278" height="34"/>
+                                <rect key="frame" x="28" y="0.0" width="278" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" alignment="left" title="Unlimited Screen Mirroring to your TV or other devices!" id="v4V-1v-Sq1">
                                     <font key="font" metaFont="systemMedium" size="14"/>
@@ -241,7 +241,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfq-jh-IhK">
-                                <rect key="frame" x="28" y="3" width="346" height="35"/>
+                                <rect key="frame" x="28" y="-7" width="346" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" alignment="left" id="63N-H9-Xc9">
                                     <font key="font" metaFont="systemMedium" size="14"/>
@@ -281,7 +281,7 @@ DQ
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WII-Qs-VN0">
                         <rect key="frame" x="45" y="350" width="58" height="58"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iconHome" id="KpZ-HT-InM"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="sketch" id="KpZ-HT-InM"/>
                     </imageView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KAA-DH-29H" customClass="SSCustomButton">
                         <rect key="frame" x="565" y="357" width="110" height="45"/>
@@ -318,7 +318,7 @@ DQ
         </window>
     </objects>
     <resources>
-        <image name="iconHome" width="1024" height="1024"/>
+        <image name="sketch" width="1526" height="1243"/>
         <image name="tick" width="256" height="256"/>
         <namedColor name="keyButtonBGColor">
             <color red="0.32699999213218689" green="0.53700000047683716" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
