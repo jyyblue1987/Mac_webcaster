@@ -273,16 +273,16 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
                 let alert = NSAlert()
                 alert.messageText = "Free Trial"
                 alert.informativeText = "The Free version will only mirror for 60 seconds. Please upgrade to the Premium Version!"
-                alert.addButton(withTitle: "Trial")
                 alert.addButton(withTitle: "Upgrade Now!")
+                alert.addButton(withTitle: "Trial")
                 alert.beginSheetModal(for: self.view.window!) { (response) in
                     if( response == .alertFirstButtonReturn )
                     {
-                        self.startCapture()
+                        self.showIAPWindow()
                     }
                     else if (response == .alertSecondButtonReturn )
                     {
-                        self.showIAPWindow()
+                        self.startCapture()
                     }
                     
                 }
