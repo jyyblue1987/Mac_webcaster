@@ -922,7 +922,7 @@
         <scene sceneID="pwW-hb-hHg">
             <objects>
                 <viewController storyboardIdentifier="SheetViewController" id="6Au-VJ-RKn" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" misplaced="YES" id="Aa6-yC-YQN">
+                    <view key="view" autoresizesSubviews="NO" id="Aa6-yC-YQN">
                         <rect key="frame" x="0.0" y="0.0" width="285" height="391"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -943,116 +943,44 @@
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="280"/>
                                     <subviews>
                                         <view canDrawConcurrently="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRz-fo-9gg">
-                                            <rect key="frame" x="0.0" y="-383" width="250" height="663"/>
+                                            <rect key="frame" x="0.0" y="-383" width="250" height="714"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xtq-U7-iQO" userLabel="HOW TO USE IT:">
-                                                    <rect key="frame" x="-2" y="643" width="236" height="20"/>
+                                                    <rect key="frame" x="-2" y="0.0" width="236" height="714"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="9OT-qJ-j1b"/>
                                                         <constraint firstAttribute="width" constant="232" id="ik2-Ip-KSm"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" alignment="left" title="SIMPLE SETUP: " id="QzW-lB-chc">
+                                                    <textFieldCell key="cell" alignment="left" id="QzW-lB-chc">
                                                         <font key="font" metaFont="system" size="14"/>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DM2-BK-QVS">
-                                                    <rect key="frame" x="-2" y="535" width="254" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="0gr-1c-vX9"/>
-                                                        <constraint firstAttribute="width" constant="250" id="Pcl-Hs-F9A"/>
-                                                    </constraints>
-                                                    <textFieldCell key="cell" alignment="left" allowsEditingTextAttributes="YES" id="02h-VR-Jyj">
-                                                        <font key="font" metaFont="cellTitle"/>
-                                                        <string key="title">1. Click the 'Start' button and then open a web browser on your digital device. 
-2. Enter the URL as shown in the Screen Mirror to TV &amp; Device app. 
-3. You should see your Mac's screen in your web browser. </string>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rAY-md-cuL">
-                                                    <rect key="frame" x="-2" y="507" width="233" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="229" id="9Zq-O5-bwz"/>
-                                                        <constraint firstAttribute="height" constant="20" id="Qec-cC-hhu"/>
-                                                    </constraints>
-                                                    <textFieldCell key="cell" alignment="left" title="SETTINGS: " id="rzk-BS-aWz">
-                                                        <font key="font" metaFont="system" size="14"/>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="snb-O9-u8r">
-                                                    <rect key="frame" x="-2" y="339" width="254" height="160"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="160" id="cvH-5H-Vzo"/>
-                                                        <constraint firstAttribute="width" constant="250" id="dxm-Bc-cRO"/>
-                                                    </constraints>
-                                                    <textFieldCell key="cell" alignment="left" allowsEditingTextAttributes="YES" id="HAr-Qb-B09">
-                                                        <font key="font" metaFont="cellTitle"/>
-                                                        <string key="title">* File Menu -&gt; Settings -&gt; Frame Rate: Adjust the frames per second for the video to be displayed to your browser. The higher the framerate, the smoother the video. 
+                                                        <mutableString key="title">SIMPLE SETUP: 
 
-* File Menu -&gt; Settings -&gt; Refresh Time: The browser will automatically refresh the video at the specified time. If you find the video looks choppy in your browser, choose a lower refresh time. </string>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9uA-mP-OaE">
-                                                    <rect key="frame" x="-2" y="311" width="233" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="EeQ-Iz-lRs"/>
-                                                        <constraint firstAttribute="width" constant="229" id="veF-X9-ZJR"/>
-                                                    </constraints>
-                                                    <textFieldCell key="cell" alignment="left" title="NOTES: " id="JNd-SA-Llc">
-                                                        <font key="font" metaFont="system" size="14"/>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8kX-LT-swk">
-                                                    <rect key="frame" x="-2" y="118" width="254" height="185"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="250" id="ETJ-bm-z2I"/>
-                                                        <constraint firstAttribute="height" constant="185" id="ajv-9w-Lbx"/>
-                                                    </constraints>
-                                                    <textFieldCell key="cell" alignment="left" allowsEditingTextAttributes="YES" id="Exk-fM-2Ci">
-                                                        <font key="font" metaFont="cellTitle"/>
-                                                        <string key="title">* Please make sure all of your digital devices are connected to the same network. Screen Mirror to TV &amp; Device app doesn't work on complex networks, such as VLANs (Virtual LANs), VPNs (Virtual Private Networks), or Subnets. 
+1. Click the 'Start' button and then open a web browser on your digital device. 
+2. Enter the URL as shown in the Screen Mirror to TV &amp; Device app. 
+3. You should see your Mac's screen in your web browser. 
+
+SETTINGS: 
+
+* File Menu -&gt; Settings -&gt; Frame Rate: Adjust the frames per second for the video to be displayed to your browser. The higher the framerate, the smoother the video. 
+
+* File Menu -&gt; Settings -&gt; Refresh Time: The browser will automatically refresh the video at the specified time. If you find the video looks choppy in your browser, choose a lower refresh time. 
+
+NOTES: 
+
+* Please make sure all of your digital devices are connected to the same network. Screen Mirror to TV &amp; Device app doesn't work on complex networks, such as VLANs (Virtual LANs), VPNs (Virtual Private Networks), or Subnets. 
 * Actual mirroring performance depends on your network condition. 
 * Sound is not supported at the moment. 
-* Please refresh the page if your Mac's screen doesn't appear in your browser. </string>
+* Please refresh the page if your Mac's screen doesn't appear in your browser. 
+</mutableString>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="snb-O9-u8r" firstAttribute="top" secondItem="rAY-md-cuL" secondAttribute="bottom" constant="8" id="1YA-Cj-IPe"/>
-                                                <constraint firstItem="8kX-LT-swk" firstAttribute="top" secondItem="KRz-fo-9gg" secondAttribute="top" constant="360" id="1mT-Q2-8lc"/>
-                                                <constraint firstItem="snb-O9-u8r" firstAttribute="leading" secondItem="KRz-fo-9gg" secondAttribute="leading" id="2aV-Z0-Kkg"/>
                                                 <constraint firstItem="xtq-U7-iQO" firstAttribute="top" secondItem="KRz-fo-9gg" secondAttribute="top" id="3qh-Qz-GQa"/>
-                                                <constraint firstItem="9uA-mP-OaE" firstAttribute="top" secondItem="snb-O9-u8r" secondAttribute="bottom" constant="8" id="4tD-jz-Yfn"/>
-                                                <constraint firstItem="DM2-BK-QVS" firstAttribute="leading" secondItem="KRz-fo-9gg" secondAttribute="leading" id="6ea-sL-w88"/>
-                                                <constraint firstItem="rAY-md-cuL" firstAttribute="top" secondItem="DM2-BK-QVS" secondAttribute="bottom" constant="8" id="6or-7M-sQd"/>
-                                                <constraint firstItem="9uA-mP-OaE" firstAttribute="leading" secondItem="KRz-fo-9gg" secondAttribute="leading" id="GJU-EK-nGC"/>
                                                 <constraint firstItem="xtq-U7-iQO" firstAttribute="leading" secondItem="KRz-fo-9gg" secondAttribute="leading" id="KkS-tU-6wb"/>
-                                                <constraint firstAttribute="trailing" secondItem="DM2-BK-QVS" secondAttribute="trailing" id="NFh-7R-cKv"/>
-                                                <constraint firstItem="9uA-mP-OaE" firstAttribute="top" secondItem="KRz-fo-9gg" secondAttribute="top" constant="332" id="QMl-fe-yeS"/>
-                                                <constraint firstAttribute="trailing" secondItem="snb-O9-u8r" secondAttribute="trailing" id="S9x-L3-hZh"/>
                                                 <constraint firstAttribute="trailing" secondItem="xtq-U7-iQO" secondAttribute="trailing" constant="18" id="Sys-h9-oqf"/>
-                                                <constraint firstAttribute="trailing" secondItem="9uA-mP-OaE" secondAttribute="trailing" constant="21" id="U5S-xH-ATb"/>
-                                                <constraint firstAttribute="trailing" secondItem="rAY-md-cuL" secondAttribute="trailing" constant="21" id="XAq-cp-YAI"/>
-                                                <constraint firstAttribute="trailing" secondItem="8kX-LT-swk" secondAttribute="trailing" id="auf-PA-qR0"/>
-                                                <constraint firstItem="DM2-BK-QVS" firstAttribute="top" secondItem="KRz-fo-9gg" secondAttribute="top" constant="28" id="chm-W0-9z5"/>
-                                                <constraint firstItem="rAY-md-cuL" firstAttribute="leading" secondItem="KRz-fo-9gg" secondAttribute="leading" id="eVh-PJ-1Us"/>
-                                                <constraint firstAttribute="bottom" secondItem="8kX-LT-swk" secondAttribute="bottom" constant="118" id="gYW-QG-Gly"/>
-                                                <constraint firstItem="rAY-md-cuL" firstAttribute="top" secondItem="KRz-fo-9gg" secondAttribute="top" constant="136" id="jZQ-Cq-XJm"/>
-                                                <constraint firstItem="8kX-LT-swk" firstAttribute="leading" secondItem="KRz-fo-9gg" secondAttribute="leading" id="o9Y-Ft-ALC"/>
-                                                <constraint firstItem="DM2-BK-QVS" firstAttribute="top" secondItem="xtq-U7-iQO" secondAttribute="bottom" constant="8" id="sBi-eo-wtt"/>
-                                                <constraint firstItem="snb-O9-u8r" firstAttribute="top" secondItem="KRz-fo-9gg" secondAttribute="top" constant="164" id="sQ6-4Z-xmv"/>
-                                                <constraint firstItem="8kX-LT-swk" firstAttribute="top" secondItem="9uA-mP-OaE" secondAttribute="bottom" constant="8" id="tEs-oD-3aw"/>
+                                                <constraint firstAttribute="bottom" secondItem="xtq-U7-iQO" secondAttribute="bottom" id="k7X-xg-th6"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -1074,7 +1002,7 @@
                                     <rect key="frame" x="-100" y="-100" width="166" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="RuK-Yt-63G">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.016129032258064502" horizontal="NO" id="RuK-Yt-63G">
                                     <rect key="frame" x="250" y="0.0" width="15" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>

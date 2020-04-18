@@ -374,7 +374,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
         if iap_flag == 0 {
             if self.isBroadcastingStarted {
-                if self.intTimeStamp + 10 < Date().timeIntervalSince1970 {  // auto-stop after 60 seconds
+                if self.intTimeStamp + 60 < Date().timeIntervalSince1970 {  // auto-stop after 60 seconds
                     self.intTimeStamp = Date().timeIntervalSince1970
                     self.isBroadcastingStarted = false
                     
