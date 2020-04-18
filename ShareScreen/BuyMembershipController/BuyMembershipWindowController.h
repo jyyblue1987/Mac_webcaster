@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BuyMembershipWindowController : NSWindowController
+@interface BuyMembershipWindowController : NSWindowController<NSWindowDelegate>
 
 -(void)setSubscriptionPlansFromStoreCompetionBlock:(void (^)(BOOL isComplete, BOOL isTransactionSuccessful,NSString *planName))completionBlock;
 

@@ -110,8 +110,9 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         let attr = [
                  NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
              ]
-        
         btnGetPremium.attributedTitle = NSAttributedString(string: "Get Premium Now!", attributes: attr)
+        
+        self.view.window?.center()
         
         checkGUI()
     }
@@ -382,8 +383,8 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
                 }
                 
                 
-            } else {    // auto-start after 120s
-                if self.intTimeStamp + 120 < Date().timeIntervalSince1970 {
+            } else {    // auto-start after 180s
+                if self.intTimeStamp + 180 < Date().timeIntervalSince1970 {
                     self.intTimeStamp = Date().timeIntervalSince1970
                     self.isBroadcastingStarted = true
                 }
@@ -448,8 +449,10 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
                 self.inAppPurchaseController = nil
             }
         }
+
+        NSApp.runModal(for: inAppPurchaseController.window!)
+//        inAppPurchaseController.showWindow(nil)
         
-        inAppPurchaseController.showWindow(nil)
     }
 
 }

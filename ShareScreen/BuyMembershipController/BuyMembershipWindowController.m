@@ -50,6 +50,14 @@ typedef void (^ALSubscriptionCompletion)(BOOL isComplete, BOOL isTransactionSucc
     [self fetchSubscriptionPlansFromStore:nil];
     //To set button default selected
     [self.window setDefaultButtonCell:[_btnBuyNow cell]];
+    
+    [self.window center];
+  
+}
+
+- (BOOL)windowShouldClose:(id)sender {
+    [self continueFreeMembership:sender];
+    return YES;
 }
 
 -(IBAction)buyMembership:(id)sender
@@ -79,7 +87,7 @@ typedef void (^ALSubscriptionCompletion)(BOOL isComplete, BOOL isTransactionSucc
 - (IBAction)continueFreeMembership:(id)sender{
     [self.window orderOut:nil];
     [NSApp endSheet:self.window];
-    
+    [NSApp stopModal];
 }
 
 
