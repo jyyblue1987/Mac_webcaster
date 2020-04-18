@@ -84,7 +84,7 @@ DQ
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86T-zf-XRO" customClass="SSCustomButton">
                         <rect key="frame" x="311" y="23" width="178" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" title="Restore Purchased" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="8fH-SG-Gc7">
+                        <buttonCell key="cell" type="bevel" title="Restore" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="8fH-SG-Gc7">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="15"/>
                         </buttonCell>
@@ -109,7 +109,7 @@ DQ
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5h-Hb-8B5" customClass="SSCustomButton">
                         <rect key="frame" x="45" y="23" width="181" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" title="Continue in Free mode" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="Nh1-i2-Dbw">
+                        <buttonCell key="cell" type="bevel" title="Continue" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="Nh1-i2-Dbw">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="15"/>
                         </buttonCell>
