@@ -105,8 +105,6 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         launchServer()
 //        initScreenCapture()
         
-        checkAndShowReminder()
-        
         let attr = [
                  NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
              ]
@@ -115,6 +113,8 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         self.view.window?.center()
         
         checkGUI()
+        
+        perform(#selector(self.checkAndShowReminder), with: nil, afterDelay: 1)
     }
     
     func checkGUI()
@@ -140,7 +140,7 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
     
   
     
-    func checkAndShowReminder() {
+    @objc func checkAndShowReminder() {
         let iap_flag = preferences.optionalInt(forKey: kIAPFlag) ?? 0
         if iap_flag == 0 {
             showIAPWindow()
