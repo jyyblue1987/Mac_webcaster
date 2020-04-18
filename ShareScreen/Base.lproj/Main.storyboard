@@ -817,7 +817,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sC8-67-v9a">
-                                <rect key="frame" x="245" y="20" width="20" height="20"/>
+                                <rect key="frame" x="245" y="5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="2Zx-aH-0hn"/>
                                 </constraints>
@@ -842,14 +842,6 @@
                                     <action selector="onBtnShareWithSender:" target="rPt-NT-nkU" id="yJc-ML-0e6"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-lJ-T2H">
-                                <rect key="frame" x="25" y="367" width="235" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Trial Limit: 60-Seconds Mirroring Only" id="Hbm-Oa-0iI">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-uQ-mrY">
                                 <rect key="frame" x="137" y="97" width="13" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -869,10 +861,18 @@
                                     <action selector="onBtnGetPremiumWithSender:" target="XfG-lQ-9wD" id="2Kb-eU-gqU"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-lJ-T2H">
+                                <rect key="frame" x="25" y="29" width="235" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Trial Limit: 60-Seconds Mirroring Only" id="Hbm-Oa-0iI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="WMQ-JW-2fc" firstAttribute="bottom" secondItem="0hZ-IL-2Fw" secondAttribute="bottom" constant="-1" id="0vi-j9-coP"/>
-                            <constraint firstItem="3Sl-lJ-T2H" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="2sO-z2-Siu"/>
+                            <constraint firstItem="3Sl-lJ-T2H" firstAttribute="top" secondItem="2dg-Jf-m50" secondAttribute="bottom" constant="2" id="5Ke-mn-2pO"/>
                             <constraint firstItem="1eS-1N-XCo" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="72" id="9AR-L6-YJq"/>
                             <constraint firstItem="1eS-1N-XCo" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="45" id="9mJ-Sv-gpE"/>
                             <constraint firstItem="V9t-4R-WcY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="AXM-dA-sLP"/>
@@ -894,7 +894,7 @@
                             <constraint firstItem="y26-eQ-lbX" firstAttribute="trailing" secondItem="2r9-1I-Ikm" secondAttribute="trailing" id="fXG-28-Egb"/>
                             <constraint firstItem="e4K-uI-Wgh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="25" id="h62-v9-ugb"/>
                             <constraint firstItem="V9t-4R-WcY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="iTb-AR-dV0"/>
-                            <constraint firstAttribute="bottom" secondItem="sC8-67-v9a" secondAttribute="bottom" constant="20" id="jQS-Cp-YK4"/>
+                            <constraint firstAttribute="bottom" secondItem="sC8-67-v9a" secondAttribute="bottom" constant="5" id="jQS-Cp-YK4"/>
                             <constraint firstItem="0hZ-IL-2Fw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="33" id="k66-ei-nOh"/>
                             <constraint firstAttribute="bottom" secondItem="2dg-Jf-m50" secondAttribute="bottom" constant="47" id="q54-7y-HnN"/>
                             <constraint firstItem="2r9-1I-Ikm" firstAttribute="top" secondItem="y26-eQ-lbX" secondAttribute="bottom" constant="8" symbolic="YES" id="qoq-9g-Mly"/>
