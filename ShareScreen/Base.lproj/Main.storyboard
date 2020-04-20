@@ -782,7 +782,7 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="e4K-uI-Wgh">
-                                <rect key="frame" x="245" y="343" width="20" height="20"/>
+                                <rect key="frame" x="245" y="348" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="HyD-Mg-dcp"/>
                                     <constraint firstAttribute="height" constant="20" id="tXv-OY-cln"/>
@@ -854,7 +854,7 @@
                                 <rect key="frame" x="81" y="91" width="122" height="32"/>
                                 <buttonCell key="cell" type="bevel" title="Get Premium Now!" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="mzX-zh-B2Q">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="systemBold"/>
+                                    <font key="font" metaFont="systemBold" size="14"/>
                                 </buttonCell>
                                 <color key="contentTintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
@@ -892,7 +892,7 @@
                             <constraint firstItem="y26-eQ-lbX" firstAttribute="top" secondItem="1eS-1N-XCo" secondAttribute="bottom" constant="20" id="a7z-3H-6mP"/>
                             <constraint firstItem="0hZ-IL-2Fw" firstAttribute="top" secondItem="2r9-1I-Ikm" secondAttribute="bottom" constant="8" symbolic="YES" id="cQf-vB-iod"/>
                             <constraint firstItem="y26-eQ-lbX" firstAttribute="trailing" secondItem="2r9-1I-Ikm" secondAttribute="trailing" id="fXG-28-Egb"/>
-                            <constraint firstItem="e4K-uI-Wgh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="25" id="h62-v9-ugb"/>
+                            <constraint firstItem="e4K-uI-Wgh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="h62-v9-ugb"/>
                             <constraint firstItem="V9t-4R-WcY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="iTb-AR-dV0"/>
                             <constraint firstAttribute="bottom" secondItem="sC8-67-v9a" secondAttribute="bottom" constant="5" id="jQS-Cp-YK4"/>
                             <constraint firstItem="0hZ-IL-2Fw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="33" id="k66-ei-nOh"/>
@@ -952,7 +952,7 @@
                                                     </constraints>
                                                     <textFieldCell key="cell" alignment="left" id="QzW-lB-chc">
                                                         <font key="font" metaFont="system" size="14"/>
-                                                        <mutableString key="title">SIMPLE SETUP: 
+                                                        <string key="title">SIMPLE SETUP: 
 
 1. Click the 'Start' button and then open a web browser on your digital device. 
 2. Enter the URL as shown in the Screen Mirror to TV &amp; Device app. 
@@ -970,7 +970,7 @@ NOTES:
 * Actual mirroring performance depends on your network condition. 
 * Sound is not supported at the moment. 
 * Please refresh the page if your Mac's screen doesn't appear in your browser. 
-</mutableString>
+</string>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" red="0.94168187759999999" green="0.99465620919999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </textFieldCell>
@@ -1002,7 +1002,7 @@ NOTES:
                                     <rect key="frame" x="-100" y="-100" width="166" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.016129032258064502" horizontal="NO" id="RuK-Yt-63G">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="RuK-Yt-63G">
                                     <rect key="frame" x="250" y="0.0" width="15" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
