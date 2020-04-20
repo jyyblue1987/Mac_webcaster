@@ -105,16 +105,21 @@ class ViewController : NSViewController, AVCaptureVideoDataOutputSampleBufferDel
         launchServer()
 //        initScreenCapture()
         
+        initUI()        
+        checkGUI()
+        
+        perform(#selector(self.checkAndShowReminder), with: nil, afterDelay: 1)
+    }
+    
+    func initUI()
+    {
         let attr = [
                  NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
              ]
         btnGetPremium.attributedTitle = NSAttributedString(string: "Get Premium Now!", attributes: attr)
         
         self.view.window?.center()
-        
-        checkGUI()
-        
-        perform(#selector(self.checkAndShowReminder), with: nil, afterDelay: 1)
+        btnExit.isHidden = true
     }
     
     func checkGUI()

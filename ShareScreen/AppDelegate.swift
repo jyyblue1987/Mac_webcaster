@@ -146,6 +146,10 @@ class AppDelegate : NSObject, NSApplicationDelegate, InAppPurchaseStateChangePro
 
     func applicationDidBecomeActive(_ notification : Notification) {
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
 
     @IBAction func openURL(_ sender : AnyObject) {
         let url = URL(string : "http://www.99mobileapp.com/pp.html")!

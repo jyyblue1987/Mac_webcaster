@@ -16,12 +16,13 @@ class MainWindowController : NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         self.windowFrameAutosaveName = "position"
+        self.window?.delegate = self
 //        NotificationCenter.default.addObserver(self, selector : #selector(windowWillClose(_:)), name : NSWindow.willCloseNotification, object : nil)
     }
     
-    func windowShouldClose(sender: AnyObject) -> Bool {
-        NSApp.hide(nil)
-        return false
+    func windowShouldClose(_ sender: NSWindow) -> Bool {
+//        NSApp.hide(nil)        
+        return true
     }
 
 //    override func awakeFromNib() {
