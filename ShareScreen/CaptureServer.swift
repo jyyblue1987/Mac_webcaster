@@ -122,8 +122,8 @@ public func CaptureServer() -> HttpServer {
             </style>
         </head>
         <body>
-            <div id="container" style="width:100%; height:100%">
-                <canvas id="image" src="" style="width:100%; height:100%;object-fit:contain">
+            <div id="container" style="width:100%; height:100%; text-align:center">
+                <canvas id="image" src="" style="object-fit:contain">
             </div>
 
             <script>
@@ -149,6 +149,11 @@ public func CaptureServer() -> HttpServer {
                         img.onload = function() {
                           canvas.width = img.width;
                           canvas.height = img.height;
+                          if( img.height != 500 )
+                            canvas.style.height = '100%';
+                          else
+                            canvas.style.height = '';
+        
                           ctx.drawImage(img, 0, 0);
                         };
                         if (ws) ws.send("ack");
